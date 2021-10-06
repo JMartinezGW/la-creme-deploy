@@ -38,7 +38,7 @@
 
       <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}">
         {%- if image_position == 'left' -%}
-          <div class="grid__item {{ product_image_width }}">
+          <div style="position: sticky; top: 130px; z-index: 2;" class="grid__item {{ product_image_width }}">
             {% include 'product-images',
               section_id: section_id,
               isModal: isModal,
