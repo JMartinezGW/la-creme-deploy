@@ -1,0 +1,43 @@
+{% comment %}
+  Renders the product card
+
+  Accepts:
+  - image: {Object} Product image
+  - benefits: {String} Product benefits
+  - skin_types: {String} Recommended skin types to use the product
+  - texture: {String} Information about product texture
+  - key_assets: {String} Information of the key assets of the product
+
+  Usage:
+  {% render 'product-card', image: main_product.featured_image %}
+{% endcomment %}
+
+<article class="product-card">
+  <figure class="product-card__image">
+    <img
+      src="{{ image.src | img_url: '276x200' }}"
+      srcset="{{ image.src | img_url: '276x200' }} 1x, {{ image.src | img_url: '276x200', scale: 2 }} 2x"
+      alt="{{ image.alt }}"
+      title="{{ image.alt }}"
+      width="276"
+      height="200"
+      loading="lazy"
+    />
+  </figure>
+  <div>
+    {% liquid
+      assign benefits_content = benefits | newline_to_br | split: '<br />'
+      assign skin_types_content = skin_types | newline_to_br | split: '<br />'
+      assign texture_content = texture | newline_to_br | split: '<br />'
+      assign key_assets_content = key_assets | newline_to_br | split: '<br />'
+    %}
+    <h3 class="product-card__title">{{ benefits_content[0] }}</h3>
+    <p class="product-card__description">{{ benefits_content[1] }}</p>
+    <h3 class="product-card__title">{{ skin_types_content[0] }}</h3>
+    <p class="product-card__description">{{ skin_types_content[1] }}</p>
+    <h3 class="product-card__title">{{ texture_content[0] }}</h3>
+    <p class="product-card__description">{{ texture_content[1] }}</p>
+    <h3 class="product-card__title">{{ key_assets_content[0] }}</h3>
+    <p class="product-card__description">{{ key_assets_content[1] }}</p>
+  </div>
+</article>

@@ -1,0 +1,66 @@
+<div class="page-width text-{{ section.settings.align_text }}" style="margin-top: {{ section.settings.top }}px; margin-bottom: {{ section.settings.bottom }}px;">
+  {% if section.settings.button_label != blank %}
+    {%- assign link_href = section.settings.button_link -%}
+    <a href="{{ link_href }}" class="btn js-no-transition btn-cta-section">{{ section.settings.button_label }}</a>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "CTA",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+	  {
+        "type": "range",
+        "id": "top",
+        "label": "Margin top",
+        "default": 75,
+        "min": 0,
+        "max": 150,
+        "step": 15,
+        "unit": "px"
+      },
+ 	  {
+        "type": "range",
+        "id": "bottom",
+        "label": "Margin top",
+        "default": 75,
+        "min": 0,
+        "max": 150,
+        "step": 15,
+        "unit": "px"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "CTA",
+        "category": "CTA"
+      }
+    ]
+  }
+{% endschema %}

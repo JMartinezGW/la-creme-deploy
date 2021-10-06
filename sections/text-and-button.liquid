@@ -1,0 +1,92 @@
+
+<div Style="background-color: {{section.settings.bg_color}}; color : {{section.settings.text_color}};" class="block-text-with-button">
+  <div class="page-width" >
+      {% if section.settings.title != blank %}
+          <p class="h2">{{ section.settings.title }}</p>
+      {% endif %}
+      {% if section.settings.text != blank %}
+          <div class="rte featured-row__subtext">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank %}
+          <a href="{{ section.settings.button_link }}" class="btn" Style="background-color: {{section.settings.button_color}}">
+            {{ section.settings.button_label }}
+          </a>
+      {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text with button",
+	"presets": [
+		{
+			"name": "Text with button",
+			"category" : "Text"
+		}
+	],
+
+    "settings": [
+		{
+        	"type": "header",
+        	"content": "Settings"
+		},
+		{	
+			"id": "text_color",
+        	"type": "color",
+        	"label": "Text color"
+		},
+		{	
+			"id": "bg_color",
+        	"type": "color",
+        	"label": "Background color"
+		},
+		{	
+			"id": "title",
+        	"type": "text",
+        	"label": "Title",
+			"default": "title here ..."
+
+		},
+		{	
+			"id": "text",
+        	"type": "richtext",
+        	"label": "Content"
+		},
+		{
+        	"type": "header",
+        	"content": "Button settings"
+		},
+		{	
+			"id": "button_label",
+        	"type": "text",
+        	"label": "Button title",
+			"default": "button"
+
+		},
+		{	
+			"id": "button_link",
+        	"type": "text",
+        	"label": "Button url",
+			"default": "https://la-creme-libre-shop.myshopify.com"
+
+		},
+		{	
+			"id": "button_color",
+        	"type": "color",
+        	"label": "button color"
+		}
+
+		
+		
+
+
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

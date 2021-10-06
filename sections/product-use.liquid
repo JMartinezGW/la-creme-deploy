@@ -1,0 +1,177 @@
+<div class="page-width">
+  <div class="product-use">
+    <div class="grid">
+      {% if product.metafields.product-use.product-use-video-url %}
+        <div class="grid__item medium-up--one-half">
+          {% assign tab_video_url = product.metafields.product-use.product-use-video-url | split: "v=" %}
+          {% if tab_video_url[1] %}
+          <iframe width="600" height="360" src="https://www.youtube.com/embed/{{ tab_video_url[1] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {% endif %}
+        </div>
+      {% elsif product.metafields.product-use.product-use-image != blank %}
+      	<div class="grid__item medium-up--one-half">
+          <img src="{{ product.metafields.product-use.product-use-image }}" />
+      	</div>
+      {% endif %}
+      {% if section.settings.step_1 != blank and product.metafields.product-use.product-use-step-1 != blank %}
+        <div class="grid__item medium-up--one-half">
+          <header class="section-header">
+            <h3 class="section-header__title">
+              {{ section.settings.title }}
+            </h3>
+          </header>
+          <ul class="no-bullets">
+            {% if section.settings.step_1 != blank and product.metafields.product-use.product-use-step-1 != blank %}
+            <li>
+              <div class="grid">
+                <div class="grid__item">
+                  <span>{{ section.settings.step_1 }}</span>
+                </div>
+                <div class="grid__item">
+                  {{ product.metafields.product-use.product-use-step-1 }}
+                </div>
+              </div>
+            </li>
+            {% endif %}
+            {% if section.settings.step_2 != blank and product.metafields.product-use.product-use-step-2 != blank %}
+            <li>
+              <div class="grid">
+                <div class="grid__item">
+                  <span>{{ section.settings.step_2 }}</span>
+                </div>
+                <div class="grid__item">
+                  {{ product.metafields.product-use.product-use-step-2 }}
+                </div>
+              </div>
+            </li>
+            {% endif %}
+            {% if section.settings.step_3 != blank and product.metafields.product-use.product-use-step-3 != blank %}
+            <li>
+              <div class="grid">
+                <div class="grid__item">
+                  <span>{{ section.settings.step_3 }}</span>
+                </div>
+                <div class="grid__item">
+                  {{ product.metafields.product-use.product-use-step-3 }}
+                </div>
+              </div>
+            </li>
+            {% endif %}
+            {% if section.settings.step_4 != blank and product.metafields.product-use.product-use-step-4 != blank %}
+            <li>
+              <div class="grid">
+                <div class="grid__item">
+                  <span>{{ section.settings.step_4 }}</span>
+                </div>
+                <div class="grid__item">
+                  {{ product.metafields.product-use.product-use-step-4 }}
+                </div>
+              </div>
+            </li>
+            {% endif %}
+          </ul>
+          <p>{{ product.metafields.product-use.product-use-step-text }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if product.metafields.product-use.product-use-precautions-text %}
+    <div class="product-precautions">
+      <div class="grid flex-grid">
+        <div class="grid__item flex-grid__item">
+          <h3>{{ section.settings.precautions_title }}</h3>
+        </div>
+        <div class="grid__item flex-grid__item">
+      	  {{ product.metafields.product-use.product-use-precautions-text }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="product-other-uses">
+    <div class="grid">
+      <div class="grid__item medium-up--one-quarter">
+        <div class="product-other-uses__header">
+          <h3>{{ section.settings.other_uses_title }}</h3>
+          {{ product.metafields.product-use.product-use-other-text }}
+        </div>
+      </div>
+      <div class="grid__item medium-up--three-quarters">
+        <div class="grid flex-grid">
+          {% assign nb = product.metafields.product-use.product-use-other-list-title | size %}
+          {% for i in (1..nb) %}
+          <div class="grid__item medium-up--one-third small--one-half">
+            <div class="product-other-use">
+              {% assign k = i | minus:1 %}
+              <img src="{{ product.metafields.product-use.product-use-other-list-image[k] }}" />
+              <h5>{{ product.metafields.product-use.product-use-other-list-title[k] }}</h5>
+              {{ product.metafields.product-use.product-use-other-list-text[k] }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Utilisation",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Use"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "step_1",
+        "label": "Step 1"
+      },
+      {
+        "type": "text",
+        "id": "step_2",
+        "label": "Step 2"
+      },
+      {
+        "type": "text",
+        "id": "step_3",
+        "label": "Step 3"
+      },
+      {
+        "type": "text",
+        "id": "step_4",
+        "label": "Step 4"
+      },
+      {
+        "type": "header",
+        "content": "Precautions"
+      },
+      {
+        "type": "text",
+        "id": "precautions_title",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "Other uses"
+      },
+      {
+        "type": "text",
+        "id": "other_uses_title",
+        "label": "Title"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,131 @@
+{% if section.settings.discountqty_enable %}
+<div
+  id="Selection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template">
+  {% if section.settings.title != blank or section.settings.text != blank %}
+    <div class="page-width">
+      {% if section.settings.title != blank %}
+        <div class="section-header">
+          <h2 class="section-header__title h3">
+            {{ section.settings.title }}
+          </h2>
+          {% if section.settings.text != blank %}
+            <div class="section-header__text">
+              {{ section.settings.text }}
+            </div>
+          {% endif %}
+          {% if section.settings.discount_1_title or section.settings.discount_2_title or section.settings.discount_3_title %}
+            <div class="section-header__percent">
+              <div class="grid grid__percent">
+                {% if section.settings.discount_1_title %}
+                  <div class="grid__item one-third">
+                    <div class="grid-precent">
+                      <div class="percent">{{ section.settings.discount_1_title }}</div>
+                      {{ section.settings.discount_1_text }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if section.settings.discount_2_title %}
+                  <div class="grid__item one-third">
+                    <div class="grid-precent">
+                      <div class="percent">{{ section.settings.discount_2_title }}</div>
+                      {{ section.settings.discount_2_text }}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if section.settings.discount_3_title %}
+                  <div class="grid__item one-third">
+                    <div class="grid-precent">
+                      <div class="percent">{{ section.settings.discount_3_title }}</div>
+                      {{ section.settings.discount_3_text }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+          	</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %} 
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Remise sur quantité",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Discount 1"
+      },
+      {
+        "type": "text",
+        "id": "discount_1_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "discount_1_text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Discount 2"
+      },
+      {
+        "type": "text",
+        "id": "discount_2_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "discount_2_text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Discount 3"
+      },
+      {
+        "type": "text",
+        "id": "discount_3_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "discount_3_text",
+        "label": "Text"
+      },
+	  {
+        "type": "checkbox",
+        "id": "discountqty_enable",
+        "label": "Display quantity discount",
+        "default": true
+      }
+    ],
+    "presets": [{
+        "name": "Remise sur quantité",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

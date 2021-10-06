@@ -1,0 +1,172 @@
+{% unless limit %}
+  {%- assign limit = main_menu.links.size -%}
+{% endunless %}
+{% unless offset %}
+  {%- assign offset = 0 -%}
+{% endunless %}
+{% unless testvar %}
+  {%- assign testvar = 0 -%}
+{% endunless %}
+
+<ul
+  class="header-desktop-nav page-width site-nav site-navigation sm-down--hide"
+  {% unless disable_aria %}
+    role="navigation" aria-label="Primary"
+  {% endunless %}>
+  {% for link in main_menu.links limit: limit offset: offset %}
+    {%- assign has_dropdown = false -%}
+    {%- assign is_megamenu = false -%}
+    {% if link.links != blank %}
+      {%- assign has_dropdown = true -%}
+      {% if link.levels > 1 %}
+        {%- assign is_megamenu = true -%}
+      {% endif %}
+    {% endif %}
+
+    <li
+      class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %}"
+      {% if has_dropdown %}aria-haspopup="true"{% endif %}>
+
+      <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}">
+        {{ link.title }}
+      </a>
+      {% if is_megamenu %}
+        {%- assign previous_column_type = '' -%}
+        {%- assign animation_column = 1 -%}
+
+        {% assign mega_menu_parents = mega_menu_parents | uniq %}
+
+        <div class="header-desktop-nav__item site-nav__dropdown megamenu text-left">
+          <div class="page-width">
+            <div class="grid{% if dropdown_alignment == 'center' %} grid--center{% endif %}">
+              {%- assign animation_column = animation_column | plus: 1 -%}
+              {% assign main_menu_item = forloop.index | downcase %}
+              {% comment %}
+              	<!-- Pour le menu split, il faut se baser sur la variable offset -->
+              	{% assign main_menu_item = offset | plus: 1 | downcase %}
+              {% endcomment %}
+              {% for block in section.blocks %}
+                {%- comment -%}
+                  If the content of the submenu is a product, a different 
+                  layout is rendered for the submenu in order to show the 
+                  values ​​of the product.
+                {%- endcomment -%}
+                {% if block.type == 'sub_menu' and block.settings.parent_id == main_menu_item and block.settings.type_of_submenu == 'product' %}
+                  {% for link in linklists[block.settings.menu].links %}
+                    {% assign submenu_product = link.object %}
+                    <div class="header-desktop-nav__grid-item grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                      <a href="{{ submenu_product.url }}">
+                        <figure class="megamenu__colection-image">
+                          <img
+                            src="{{ submenu_product.featured_image.src | img_url: '200x160' }}"
+                            srcset="{{ submenu_product.featured_image.src | img_url: '200x160' }} 1x, {{ submenu_product.featured_image.src | img_url: '200x160', scale: 2 }} 2x, {{ submenu_product.featured_image.src | img_url: '200x160', scale: 3 }} 3x"
+                            width="200"
+                            height="160"
+                            alt="{{ submenu_product.featured_image.alt }}"
+                            title="{{ submenu_product.featured_image.alt }}"
+                          />
+                          <figcaption class="h5">
+                            {{ submenu_product.title }}<br />
+                            <span>{{ submenu_product.price | money }}</span>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+
+                {%- comment -%}
+                  If the content of the submenu are pages, a specific 
+                  layout will be rendered to show each page in a column of the grid.
+                {%- endcomment -%}
+                {% if block.type == 'sub_menu' and block.settings.parent_id == main_menu_item and block.settings.type_of_submenu == 'page' %}
+                  {% for link in linklists[block.settings.menu].links %}
+                    {% assign submenu_page = link.object %}
+                    <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                      <a href="{% if submenu_page.url %}{{ submenu_page.url }}{% else %}{{ link.url }}{% endif %}">
+                        <figure class="megamenu__colection-image">
+                          <img
+                            src="{{ block.settings.image | img_url: '200x160' }}"
+                            srcset="{{ block.settings.image | img_url: '200x160' }} 1x, {{ block.settings.image | img_url: '200x160', scale: 2 }} 2x"
+                            width="200"
+                            height="160"
+                            alt="{{ block.settings.title }}"
+                            title="{{ block.settings.title }}"
+                          />
+                          <figcaption class="h5">
+                            {{ block.settings.title }}<br />
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+                {% if block.type == 'sub_menu' and block.settings.parent_id == main_menu_item and block.settings.type_of_submenu == 'links' %}
+                <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+
+                  {% assign childlink = linklists[block.settings.menu] %}
+
+                  {% if block.settings.image != blank and block.settings.image_position == 'top' %}
+                    <div class="megamenu__colection-image">
+                      <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ grandchildlink.title }}" />
+                  	</div>
+                  {% endif %}
+
+                  <div class="h5">{{ block.settings.title }}</div>
+
+                  {% if childlink.levels > 0 %}
+                      {%- assign previous_column_type = 'full' -%}
+                  {% else %}
+                      {%- assign previous_column_type = 'single' -%}
+                  {% endif %}
+
+                  {% for grandchildlink in childlink.links %}
+                    <div>
+                      <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                        {{grandchildlink.title}}
+                      </a>
+                    </div>
+                  {% endfor %}
+
+                  {% if block.settings.image != blank and block.settings.image_position == 'bottom' %}
+                    <div class="megamenu__colection-image">
+                      <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ grandchildlink.title }}" />
+                  	</div>
+                  {% endif %}
+              	</div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% elsif has_dropdown %}
+        <ul class="site-nav__dropdown text-left">
+          {% for childlink in link.links %}
+            {%- assign has_sub_dropdown = false -%}
+            {% if childlink.links != blank %}
+              {%- assign has_sub_dropdown = true -%}
+            {% endif %}
+
+            <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+              <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level {% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                {{ childlink.title | escape }}
+                {% if has_sub_dropdown %}
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/></svg>
+                {% endif %}
+              </a>
+              {% if has_sub_dropdown %}
+                <ul class="site-nav__deep-dropdown">
+                  {% for grandchildlink in childlink.links %}
+                    <li>
+                      <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

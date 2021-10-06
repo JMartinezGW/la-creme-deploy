@@ -1,0 +1,402 @@
+{%- unless thumbnail_position -%}
+  {%- assign thumbnail_position = 'beside' -%}
+{%- endunless -%}
+
+{%- unless description_style -%}
+  {%- assign description_style = 'full' -%}
+{%- endunless -%}
+
+{%- assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+<div id="ProductSection-{{ section_id }}"
+  class="product-section"
+  data-section-id="{{ section_id }}"
+  data-section-type="product-template"
+  data-product-handle="{{ product.handle }}"
+  data-product-url="{{ product.url | within: collection }}"
+  data-aspect-ratio="{{ 100 | divided_by: product.featured_media.aspect_ratio }}"
+  data-img-url="{{ product_img_structure }}"
+  {% if settings.product_zoom_enable %}
+    data-image-zoom="true"
+  {% endif %}
+  {% if settings.inventory_enable %}
+    data-inventory="true"
+  {% endif %}
+  {% if settings.inventory_transfers_enable %}
+    data-incoming-inventory="true"
+  {% endif %}
+  {% unless isModal %}
+    data-enable-history-state="true"
+  {% endunless %}>
+
+  {%- include 'product-template-variables' -%}
+  
+	{%- if settings.show_breadcrumbs and isModal != true -%}
+      {%- include 'breadcrumbs' -%}
+  	{%- endif -%}
+  <div class="page-content page-content--product">
+    <div class="page-width">
+
+      <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}">
+        {%- if image_position == 'left' -%}
+          <div class="grid__item {{ product_image_width }}">
+            {% include 'product-images',
+              section_id: section_id,
+              isModal: isModal,
+              thumbnail_arrows: thumbnail_arrows,
+              thumbnail_position: thumbnail_position,
+              video_looping: video_looping,
+              video_style: video_style
+            %}
+          </div>
+        {%- endif -%}
+
+        <div class="grid__item {{ product_description_width }}">
+
+          <div class="product-single__meta">
+            
+            {%- if social -%}
+              {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+            {%- endif -%}
+
+            {%- if settings.vendor_enable -%}
+              <div class="product-single__vendor">
+                {%- assign vendor_handle = product.vendor | handleize  -%}
+                {%- if collections[vendor_handle] != empty -%}
+                  <a href="{{ routes.collections_url }}/{{ collections[vendor_handle].handle }}">
+                    {{ collections[vendor_handle].title }}
+                  </a>
+                {%- else -%}
+                  {{ product.vendor | link_to_vendor }}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if isModal -%}
+              <p class="h2 product-single__title">
+                {{ product.title }}
+              </p>
+            {% else %}
+              <h1 class="h2 product-single__title">
+                {{ product.title }}
+              </h1>
+            {%- endif -%}
+            {%- if product.metafields.product-capacity.product-capacity -%}
+              <p class="product-ml">
+                {% if product.type == 'Recharge' %}
+                {{ 'products.product.subtitle' | t }}
+                {% endif %}
+                {{ product.metafields.product-capacity.product-capacity }} {{ 'products.product.from' | t }} {{ product.price | money }}
+              </p>
+            {%- endif -%}
+
+            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+
+            {%- unless description_style == 'full' -%}
+              <div class="product-single__description rte">
+                {%- assign description_product = product.description | split: '[break description]' -%}
+                {{ description_product | first }}
+              </div>
+            {%- endunless -%}
+
+           
+{%- if settings.enable_product_reviews and settings.reviews_layout == 'full' -%}
+              {%- if isModal -%}
+                {%- assign review_link = product.url | within: collection | append: '#Reviews-' | append: product.id -%}
+              {% else %}
+                {%- assign review_link = '#Reviews-' | append: product.id -%}
+              {%- endif -%}
+              <a href="{{ review_link }}" class="product-single__review-link">
+                <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+              </a>
+            {%- endif -%}
+
+            {%- if settings.sku_enable -%}
+              <p id="Sku-{{ section_id }}" class="product-single__sku">
+                {%- if current_variant.sku -%}
+                  {{ current_variant.sku }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+
+            {%- if settings.inventory_enable or settings.inventory_transfers_enable -%}
+              {%- assign variants_with_inventory_tracking = product.variants | where: 'inventory_management', 'shopify' -%}
+
+              <script>
+                // Store inventory quantities in JS because they're no longer
+                // available directly in JS when a variant changes.
+                // Have an object that holds all potential products so it works
+                // with quick view or with multiple featured products.
+                window.inventories = window.inventories || {};
+                window.inventories['{{section_id}}'] = {};
+                 {% for variant in variants_with_inventory_tracking %}
+                  window.inventories['{{section_id}}'][{{variant.id}}] = {
+                    'quantity': {{ variant.inventory_quantity | default: 0 }},
+                    'incoming': {{ variant.incoming | default: false | json }},
+                    'next_incoming_date': {{ variant.next_incoming_date | date: format: 'date' | json }}
+                  };
+                 {% endfor %}
+              </script>
+
+              {% comment %}
+                If loaded in quick view, it might be from a JS-loaded function
+                that loads recommended products. If that's the case, the above
+                JS will not set the variant inventory. Add it to an accessible
+                data div to read later instead.
+              {% endcomment %}
+              {%- if isModal -%}
+                <div
+                  data-section-id="{{ section_id }}"
+                  class="hide js-product-inventory-data"
+                  aria-hidden="true"
+                  >
+                  {%- for variant in variants_with_inventory_tracking -%}
+                    <div
+                      class="js-variant-inventory-data"
+                      data-id="{{ variant.id }}"
+                      data-quantity="{{ variant.inventory_quantity | default: 0 }}"
+                      data-incoming="{{ variant.incoming | default: false | json }}"
+                      data-date="{{ variant.next_incoming_date | date: format: 'date' | json }}"
+                    >
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+
+            {% comment %}
+              Only recharge-type products like: facial cream, make-up removers, etc; 
+              They will have a second variant selector in order to be able to 
+              add an additional product corresponding to their pots to the 
+              purchase.
+            {% endcomment %}
+            {% if product.type == "Recharge" %}
+              <div class="product-single__selector-container">
+                {% assign collection_related = collections['all'] %}
+                {% render 'product-variant-selector',
+                  product_id: product.id,
+                  product_tags: product.tags,
+                  product_price: product.price,
+                  all_products_in_store: collection_related,
+                  compare_products_button_text: product.metafields.product_sheet.compare_products_button_text,
+                %}
+              </div>
+            {% endif %}
+
+            <div class="product-single__prices-cart">
+            {%- unless isModal -%}
+              {% comment %}
+                Shopify's product form attaches a number of tracking
+                scripts that cause slower load times and false statistics.
+                Quick view modals request these on-demand.
+              {% endcomment %}
+              {%- if product.type == "Recharge" -%}
+                <button
+                  type="button"
+                  name="add"
+                  id="AddToCart-{{ section_id }}"
+                  class="btn btn--full add-to-cart add-to-cart-button{% if enable_dynamic_buttons %} btn--secondary{% endif %}"
+                  {% unless current_variant.available %} disabled="disabled"{% endunless %}
+                >
+                  <span id="AddToCartText-{{ section_id }}">
+                    {% if current_variant.available %}
+                      {% if template == 'product.preorder' %}
+                        {{ 'products.product.preorder' | t }}
+                      {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {% endif %}
+                    {% else %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% endif %}
+                  </span>
+                </button>
+              {% else %}
+                {% include 'product-form', section_id: section_id %}
+              {%- endif -%}
+            {%- else -%}
+              <div
+                id="ProductFormHolder-{{ section_id }}"
+                class="product-form-holder"
+                data-url="{{ product.url }}"
+                data-template="{{ product.template_suffix }}"></div>
+            {%- endunless -%}
+              
+            <div class="product-single__prices">
+			{%- assign hide_sale_price = true -%}
+            {%- if product.compare_at_price_max > product.price -%}
+              {%- if current_variant.compare_at_price > current_variant.price -%}
+                {%- assign hide_sale_price = false -%}
+              {%- endif -%}
+              <span
+                id="PriceA11y-{{ section_id }}"
+                class="visually-hidden"
+                aria-hidden="{{ hide_sale_price }}">
+                  {{ 'products.general.regular_price' | t }}
+              </span>
+              <span class="product__price-wrap-{{ section_id }}{% if hide_sale_price %} hide{% endif %}">
+                <span id="ComparePrice-{{ section_id }}" class="product__price product__price--compare">
+                  {%- if current_variant.compare_at_price > current_variant.price -%}
+                    {{ current_variant.compare_at_price | money }}
+                  {%- endif -%}
+                </span>
+              </span>
+              <span id="ComparePriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+            {% else %}
+              <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            {%- endif -%}
+
+            <span id="ProductPrice-{{ section_id }}"
+              class="product__price total-product-price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+              {{ current_variant.price | money }}
+            </span>
+
+            {%- if settings.product_save_amount -%}
+              {%- if settings.product_save_type == 'dollar' -%}
+                {% capture saved_amount %}{{ current_variant.compare_at_price | minus: current_variant.price | money }}{% endcapture %}
+              {%- else -%}
+                {% capture saved_amount %}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{% endcapture %}
+              {%- endif -%}
+              <span id="SavePrice-{{ section_id }}" class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+                {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+              </span>
+            {%- endif -%}
+            </div>
+
+            
+            </div>
+            
+             <div class="product__unit-price product__unit-price--spacing product__unit-price-wrapper--{{ section_id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+              {%- capture unit_price_base_unit -%}
+                <span class="product__unit-base--{{ section_id }}">
+                  {%- if current_variant.unit_price_measurement -%}
+                    {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                      {{ current_variant.unit_price_measurement.reference_value }}
+                    {%- endif -%}
+                    {{ current_variant.unit_price_measurement.reference_unit }}
+                  {%- endif -%}
+                </span>
+              {%- endcapture -%}
+
+              <span class="product__unit-price--{{ section_id }}">{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
+            </div>
+
+            {%- if product.metafields.product-delivery.product-delivery != blank -%}
+            	<div class="product-delivery-info">
+                {% assign product_delivery = product.metafields.product-delivery.product-delivery | split: ':' %}
+                <p>
+                  <strong>{{ product_delivery | first }}</strong>
+                  {{ product_delivery | last }}
+                </p>
+              </div>
+            {%- endif -%}
+
+            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+              {% if product.type == 'Recharge' or product.type == 'Pot' %}  
+              	<div class="product__policies rte small--text-center">
+                  <small>
+                    {%- if shop.taxes_included -%}
+                      <strong>{{ 'products.product.include_taxes.title' | t }}</strong>
+                      {{ 'products.product.include_taxes.description' | t }}
+                    {%- endif -%}
+                  </small>
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+
+            <div class="secure-payment-card">
+              <figure class="secure-payment-card__image-container">
+                {% assign secure_payments_icon_data = secure_payments_icon | split: '|' %}
+                <img
+                  class="secure-payment-card__image"
+                  width="20"
+                  height="20"
+                  src="{{ secure_payments_icon_data[0] | file_url }}"
+                  alt="{{ secure_payments_icon_data[1] }}"
+                />
+              </figure>
+              <p class="secure-payment-card__text">
+                {{ secure_payments_text }}
+              </p>
+            </div>
+
+            {%- if product.type == "Recharge" and show_product_associated == true -%}
+              <a href="#product-single_associated" class="product-associated-btn">
+                {%- if associated_icon != blank -%}
+				          {%- assign img_url = associated_icon | img_url: 'master' -%}
+               	  <span>
+                    <img class="lazyload"
+                      data-src="{{ img_url }}"
+                      alt="{{ associated_icon.alt }}">
+                  </span>
+                {%- endif -%}
+               	<span>
+                  {%- if associated_title != blank -%}
+                  <strong>{{ associated_title }}</strong>
+                  {%- endif -%}
+                  {%- if associated_text != blank -%}
+                    {{ associated_text }}
+                  {%- endif -%}
+                </span>
+              </a>
+            {%- endif -%}
+
+            {%- comment -%}Accordions{%- endcomment -%}
+            {%- if product.type == "Recharge" -%}
+              {% liquid
+                assign accordions = description_product | last | split: '[accordion]'
+                assign range = (0..accordions.size)
+              %}
+              {%- for i in range -%}
+                {% if i == accordions.size %}
+                  {% break %}
+                {% else %}
+                  {% assign accordion_content = accordions[i] | split: '[break content]' %}
+                  {%- render 'product-details-accordion', content: accordion_content -%}
+                {% endif %}
+              {%- endfor -%}
+            {%- endif -%}
+
+            {%- if settings.trust_image != blank -%}
+              <div class="aos-animate trust-image" style="max-width: {{ settings.trust_image.width }}px;">
+                <div class="image-wrap " style="height: 0; padding-bottom: {{ 100 | divided_by: settings.trust_image.aspect_ratio }}%;">
+                  {%- assign img_url = settings.trust_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="lazyload"
+                      data-src="{{ img_url }}"
+                      data-widths="[360, 540]"
+                      data-aspectratio="{{ settings.trust_image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ settings.trust_image.alt }}">
+                  <noscript>
+                    <img class="lazyloaded" src="{{ settings.trust_image | img_url: '540x' }}" alt="{{ settings.trust_image.alt }}">
+                  </noscript>
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- unless description_style == 'full' -%}
+              {% include 'product-additional-content', section_id: section_id %}
+            {%- endunless -%}
+
+          </div>
+        </div>
+
+        {%- unless image_position == 'left' -%}
+          <div class="grid__item {{ product_image_width }}">
+            {% include 'product-images', section_id: section_id, isModal: isModal, thumbnail_position: thumbnail_position, thumbnail_arrows: thumbnail_arrows %}
+          </div>
+        {%- endunless -%}
+      </div>
+
+      {%- if description_style == 'full' -%}
+        <div class="product-single__description-full rte">
+          {{ product.description }}
+        </div>
+
+        {% include 'product-additional-content', section_id: section_id %}
+      {%- endif -%}
+    
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+</div>
+  </div>
+</div>

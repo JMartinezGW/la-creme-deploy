@@ -1,0 +1,206 @@
+{% comment %}
+  Renders the product variant selector
+
+  Accepts:
+  - product_id: {Number} Product id
+  - product_tags: {Object} Product tags
+  - product_price: {Number} Product price
+  - all_products_in_store: {Object} All the products in the store in order to group the products that belong to the same type of product
+  - compare_products_button_text: {String} Compare products button text
+
+  Usage:
+  {% render 'product-variant-selector', product_tags: product.tags %}
+{% endcomment %}
+
+<div>
+  <div class="product-single__step-header">
+    <h3>
+      {{ 'products.product.variant_selector_title' | t }} 
+      {%- for tags in product_tags -%}
+        {% if tags contains "c|" %}
+          {{ tags | remove: 'c|' }}
+        {% endif %}
+      {%- endfor -%}
+    </h3>
+    <span class="product-single__step-price">{{ product_price | money }}</span>
+  </div>
+  <button
+    type="button"
+    class="product-single__button_compare_products js-button-compare-products"
+  >
+    {{ compare_products_button_text }}
+  </button>
+  <div class="product-single__variantsContainer">
+    {%- for product_in_collection in all_products_in_store.products -%}
+      {%- for tags in product_tags -%}
+        {%- if tags contains 'r|' -%}
+          {%- for tags_in_product_related in product_in_collection.tags -%}
+            {% comment %}
+              Render only the products that match the product type.
+            {% endcomment %}
+            {%- if tags_in_product_related contains tags -%}
+              <a
+                class="product-variant-selector recharge-only{% if product_in_collection.id == product_id %} is-active{% endif %}"
+                href="{{ product_in_collection.url }}"
+              >
+                <figure class="product-variant-selector__radio">
+                  <img
+                    src="{{ product_in_collection.featured_image.src | img_url: '69x50' }}"
+                    srcset="{{ product_in_collection.featured_image.src | img_url: '69x50' }} 1x, {{ product_in_collection.featured_image | img_url: '69x50', scale: 2 }} 2x"
+                    width="69"
+                    height="50"
+                    alt="{{ product_in_collection.featured_image.alt }}"
+                    title="{{ product_in_collection.featured_image.alt }}"
+                  />
+                </figure>
+                {%- for tag in product_in_collection.tags -%}
+                  {%- if tag contains 'v|' -%}
+                    <p>{{ tag | remove:'v|' }}</p>
+                  {%- endif -%}
+                {%- endfor -%}
+                <span></span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
+<div>
+  <div class="product-single__step-header">
+    <h3>{{ 'products.product.pot_variant_selector_title' | t }}</h3>
+    <span id="potPrice" class="product-single__step-price"></span>
+  </div>
+  <div class="product-single__variantsContainer" id="potVariantSelector">
+    <label class='pot-variant-selector pot-variant-selector--eco-recharge-only'>
+      <input
+        class="recharge-only-input recharge-only is-active"
+        type="radio"
+        value="eco-recharge-only"
+        name="pot"
+        checked
+      />
+      <div class="pot-variant-selector__radio">
+        <span class="pot-variant-selector__title">
+          {{ 'products.product.eco_recharge_only' | t }}
+        </span>
+      </div>
+    </label>
+    {%- for product_in_collection in all_products_in_store.products -%}
+      {%- for tags_in_product_related in product_in_collection.tags -%}
+        {%- for tags in product_tags -%}
+          {% if tags contains 'v|' %}
+            {% assign main_product_variant = tags | remove: 'v|' %}
+          {% endif %}
+          {%- if tags contains 'r|' -%}
+            {%- if tags_in_product_related contains 'p|' -%}
+              {% assign pot_product_type = tags_in_product_related | remove: 'p|' %}
+              {% assign product_type = tags | remove: 'r|' %}
+              {%- if pot_product_type == product_type -%}
+                <script>
+                  const getPotData = () => {
+                    let pot = {{ product_in_collection | json }};
+                    return {
+                      getPot: () => {
+                        return pot
+                      }
+                    }
+                  };
+                  const potData = getPotData();
+
+                  let variantMediaResources = new Map();
+                </script>
+                {%- for variant in  product_in_collection.variants -%}
+                  {% if variant.available %}
+                    <label class='pot-variant-selector'>
+                      <input
+                        class='pot-input'
+                        type='radio'
+                        value='{{ variant.title | handle }}'
+                        name='pot'
+                        data-pot-id='{{ variant.id }}'
+                      />
+                      <div class=' radio_{{ variant.title | handle }}'></div>
+                      <span class='pot-variant-selector__title'>
+                        {{ variant.title }}
+                      </span>
+                    </label>
+
+                    {%- comment -%}
+                      Depending on the main product and its variant, the images 
+                      of the pot variants that correspond to said product are assigned.
+                    {%- endcomment -%}
+                    {% case product_type %}
+                      {% when "nettoyer" %}
+                        {% if main_product_variant == "Poudre" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_nettoyant_poudre | split: ',' %}
+                        {% elsif main_product_variant == "Pâte" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_nettoyant_pate | split: ',' %}
+                        {% endif %}
+
+                      {% when "demaquiller" %}
+                        {% if main_product_variant == "Crème" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_d_maquillant_creme | split: ',' %}
+                        {% elsif main_product_variant == "Baume" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_demaquillant_baume | split: ',' %}
+                        {% endif %}
+
+                      {% when "hydrater" %}
+                        {% case main_product_variant %}
+                          {% when "Riche" %}
+                            {% assign images = variant.metafields.product_sheet.images_for_la_creme_riche | split: ',' %}
+
+                          {% when "Originale" %}
+                            {% assign images = variant.metafields.product_sheet.images_for_la_creme_originale | split: ',' %}
+
+                          {% when "Légère" %}
+                            {% assign images = variant.metafields.product_sheet.images_for_la_creme_legere | split: ',' %}
+
+                          {% when "Baume" %}
+                            {% assign images = variant.metafields.product_sheet.images_for_la_creme_baume | split: ',' %}
+                        {% endcase %}
+
+                      {% when "exfolier" %}
+                        {% if main_product_variant == "Masque" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_exfoliant_masque | split: ',' %}
+                        {% elsif main_product_variant == "Grains" %}
+                          {% assign images = variant.metafields.product_sheet.images_for_exfoliant_grains | split: ',' %}
+                        {% endif %}
+                    {% endcase %}
+                    {% for image in images %}
+                      {% liquid
+                        assign image_data = image | split: '|'
+                        assign src = image_data[0]
+                        assign image_alt = image_data[1]
+                      %}
+                      {% if src contains '.mp4' %}
+                        {% assign image_url = src | file_url %}
+                      {% else %}
+                        {% assign image_url = src | file_img_url: 'master' %}
+                      {% endif %}
+                      <script>
+                        if (!variantMediaResources.has('{{ variant.id }}')) {
+                          variantMediaResources.set('{{ variant.id }}', []);
+                          variantMediaResources.get('{{ variant.id }}').push({
+                            src: "{{ image_url }}",
+                            alt: "{% if src contains '.mp4' %}{{ image_alt | file_img_url: 'master' }}{% else %}{{ image_alt }}{% endif %}",
+                          });
+                        } else {
+                          variantMediaResources.get('{{ variant.id }}').push({
+                            src: "{{ image_url }}",
+                            alt: "{% if src contains '.mp4' %}{{ image_alt | file_img_url: 'master' }}{% else %}{{ image_alt }}{% endif %}",
+                          });
+                        }
+                      </script>
+                    {% endfor %}
+                  {% endif %}
+                {%- endfor -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>

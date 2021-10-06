@@ -1,0 +1,72 @@
+{% section 'product-template' %}
+{% if product.type == 'Recharge' or product.type == 'Pot' %}
+  <div class="product__reassurance">
+    {% section 'text-columns' %}
+  </div>
+  {% section 'product-ingredients' %}
+  {% section 'product-judgeme-reviews' %}
+  {% section 'product-qtydiscount' %}
+  {% section 'product-selection' %}
+{% endif %}
+{% section 'product-faq' %}
+{% section 'product-recommendations' %}
+{% section 'recently-viewed' %}
+
+{% if collection %}
+  <div class="text-center page-content page-content--bottom">
+    <a href="{% if collection.handle == 'frontpage' %}/{% else %}{{ collection.url }}{% endif %}" class="btn btn--small return-link">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg> {{ 'products.general.collection_return' | t: collection: collection.title }}
+    </a>
+  </div>
+{% endif %}
+
+<div class="product-fixed-bar">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-half">
+        {%- for media in product.media -%}
+          {% if forloop.first == true %}
+              {%- include 'media',
+                media: media,
+                featured_media: featured_media,
+                isModal: isModal,
+                video_looping: video_looping,
+                video_style: video_style
+                -%}
+            {%- endif -%}
+        {%- endfor -%}
+        <p class="h5">
+          {{ product.title }}
+        </p>
+        {%- if product.metafields.product-capacity.product-capacity -%}
+          <p class="product-ml">
+            {% if product.type == 'Recharge' %}
+              {{ 'products.product.subtitle' | t }}
+            {% endif %}
+            {{ product.metafields.product-capacity.product-capacity }} 
+            {{ 'products.product.from' | t }} {{ product.price | money }}
+          </p>
+        {%- endif -%}
+      </div>
+      <div class="grid__item medium-up--one-half">
+        <div class="add-to-cart-fixed">
+          <div id="fixedBarBuyButton" class="btn"></div>
+          <div id="fixedBarTotalPrice" class="price"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Override default values of shop.strings for each template.
+  // Alternate product templates can change values of
+  // add to cart button, sold out, and unavailable states here.
+  theme.productStrings = {
+    addToCart: {{ 'products.product.add_to_cart' | t | json }},
+    soldOut: {{ 'products.product.sold_out' | t | json }},
+    unavailable: {{ 'products.product.unavailable' | t | json }}
+  };
+</script>
+<script src="{{ 'main.js' | asset_url }}" defer="defer"></script>
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, auto_install: true, product: product %}

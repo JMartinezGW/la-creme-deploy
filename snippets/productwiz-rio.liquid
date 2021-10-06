@@ -1,0 +1,99 @@
+
+<script>
+  var __productWizRio = {};
+  (function() {
+    // START-1
+    {% if product %}
+      var product = {{product | json}};
+      var productMetafield = {{product.metafields.productwiz.rio | json}};
+      var shopMetafield = {{shop.metafields.productwiz.rio | json}};
+
+      // START-2
+      __productWizRio.enabled = false;
+      if (Array.isArray(product.variants) && product.variants.length > 0 && Array.isArray(product.media) && product.media.length > 0) {
+        if (!shopMetafield || !shopMetafield.disabled) {
+          if (productMetafield && productMetafield.enabled && !productMetafield.empty) {
+            __productWizRio.enabled = true;
+            __productWizRio.product = product;
+            __productWizRio.productRio = productMetafield.mapping;
+            __productWizRio.mediaSettings = productMetafield.mediaSettings;
+          }
+        }
+      }
+      // END-2
+    {% else %}
+      __productWizRio.enabled = false;
+    {% endif %}
+    // END-1
+    if (__productWizRio.enabled) {
+      
+function callback(mutations) {
+  mutations.forEach(function (mutation) {
+    Array.prototype.forEach.call(mutation.addedNodes, function (addedNode) {
+      if (typeof addedNode.className === 'string') {
+        if (!__productWizRio.config) {
+__productWizRio.config = {
+  "breakpoint": "769px",
+  "mobile": {
+    "navigation": false,
+    "pagination": true,
+    "swipe": true,
+    "dark": true,
+    "magnify": false,
+    "thumbnails": false,
+    "lightBox": true,
+    "lightBoxZoom": 2
+  },
+  "desktop": {
+    "navigation": false,
+    "pagination": false,
+    "swipe": true,
+    "dark": true,
+    "magnify": false,
+    "thumbnails": {
+      "orientation": "bottom",
+      "multiRow": false,
+      "thumbnailWidth": 86,
+      "navigation": true
+    },
+    "lightBox": true,
+    "lightBoxZoom": 2
+  }
+};
+}
+
+try {
+  var productGalleryClassNames = ['product__photos'];
+  var rioClassName = 'rio-media-gallery';
+  var isContainer = productGalleryClassNames.find(function (x) {
+    return addedNode.className.indexOf(x) > -1;
+  }) && addedNode.className.indexOf(rioClassName) < 0;
+
+  if (isContainer && !__productWizRio.finishedInjection) {
+    var newAddedNode = addedNode.cloneNode(false);
+    newAddedNode.className += " ".concat(rioClassName, " rio-mobile-desktop-breakpoint");
+    newAddedNode.style.paddingBottom = '1px';
+    addedNode.parentElement.replaceChild(newAddedNode, addedNode);
+    var style = document.createElement('style');
+    style.textContent = "\n        .rio-mobile-desktop-breakpoint {\n        }\n        @media (max-width: 768px) {\n          .rio-mobile-desktop-breakpoint {\n              padding-top: 17px;\n          }\n        }\n      ";
+    document.head.appendChild(style);
+    __productWizRio.finishedInjection = true;
+  }
+} catch (err) {}
+      }
+    });
+  });
+}
+var observer = new MutationObserver(callback);
+var config = { childList: true, subtree: true };
+window.addEventListener('load', function () {
+  observer.disconnect();
+});
+observer.observe(document, config);
+
+    }
+  })();
+</script>
+<link rel="stylesheet" href="{{ 'productwiz-rio.css' | asset_url }}">
+<link rel="preload" href="{{ 'productwiz-rio.js' | asset_url }}" as="script">
+<script async src="{{ 'productwiz-rio.js' | asset_url }}"></script>

@@ -1,0 +1,138 @@
+<div class="page-width">
+  <div class="product-ingredients">
+    {% if product.metafields.product-ingredients.product-ingredients-title %}
+      <header class="section-header">
+        <h3 class="section-header__title">
+          {{ product.metafields.product-ingredients.product-ingredients-title }}
+        </h3>
+      </header>
+    {% endif %}
+	<div class="product-ingredients-list-wrapper">
+      <div class="product-ingredients-list">
+        {% assign nb = product.metafields.product-ingredient.product-ingredient-title | size %}
+        <figure>
+          <img src="{{ product.metafields.product-ingredients.product-ingredients-image }}" />
+        </figure>
+        {% for i in (1..nb) %}
+          {% assign k = i | minus: 1 %}
+          {% assign k_modulo = k | modulo: 2 %}
+          {% if k_modulo == 0 %}
+            <div class="grid">
+              <div class="grid__item medium-up--one-third">
+                <div class="product-ingredient">
+                  <button type="button" class="collapse__title collapsible-trigger collapsible-trigger-btn" aria-controls="Collapse-{{ i }}">
+                    <p class="product-ingredients-list-title">
+                      <span class="icon-title">
+                        {% include 'collapsible-icons' %}
+                      </span>
+                      <span class="primary-title">{{ product.metafields.product-ingredient.product-ingredient-title[k] }}</span>
+                      <span class="percent-title">{{ product.metafields.product-ingredient.product-ingredient-percentage[k] }}</span>
+                    </p>
+                  </button>
+                  <div id="Collapse-{{ i }}" class="collapsible-content collapsible-content--all">
+                    <div class="collapsible-content__inner">
+                      <div class="collapse__collapsible">
+                        {{ product.metafields.product-ingredient.product-ingredient-text[k] }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          {% endif %}
+          {% if k_modulo == 1 %}
+              <div class="grid__item medium-up--one-third">
+                <div class="product-ingredient">
+                  <button type="button" class="collapse__title collapsible-trigger collapsible-trigger-btn" aria-controls="Collapse-{{ i }}">
+                    <p class="product-ingredients-list-title">
+                      <span class="icon-title">
+                        {% include 'collapsible-icons' %}
+                      </span>
+                      <span class="primary-title">{{ product.metafields.product-ingredient.product-ingredient-title[k] }}</span>
+                      <span class="percent-title">{{ product.metafields.product-ingredient.product-ingredient-percentage[k] }}</span>
+                    </p>
+                  </button>
+                  <div id="Collapse-{{ i }}" class="collapsible-content collapsible-content--all">
+                    <div class="collapsible-content__inner">
+                      <div class="collapse__collapsible">
+                        {{ product.metafields.product-ingredient.product-ingredient-text[k] }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <h4 class="product-ingredients-text">
+      {{ product.metafields.product-ingredients.product-ingredients-text }}
+    </h4>
+  </div>
+
+  {% if product.metafields.product-ingredients.product-ingredients-complete %}
+    <div class="product-ingredients-complete">
+      <h5>{{ section.settings.complete_title }}</h5>
+      <button type="button" class="collapse__title collapsible-trigger collapsible-trigger-btn" aria-controls="Collapse-complete">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16">
+          <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/>
+        </svg>
+      </button>
+      <div id="Collapse-complete" class="collapsible-content collapsible-content--all">
+        <div class="collapsible-content__inner">
+          <div class="collapse__collapsible">
+     		{{ product.metafields.product-ingredients.product-ingredients-complete }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if product.metafields.product-ingredients.product-ingredients-bar-code %}
+    <div class="product-ingredients-bar-code">
+      <div class="grid">
+        <div class="grid__item">
+          <p>{{ section.settings.bar_code_text }}</p>
+          <img src="{{ product.metafields.product-ingredients.product-ingredients-bar-code }}" />
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Ingrédients",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Complete"
+      },
+      {
+        "type": "text",
+        "id": "complete_title",
+        "label": "Title"
+      },
+      {
+        "type": "header",
+        "content": "Bar code"
+      },
+      {
+        "type": "text",
+        "id": "bar_code_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "bar_code_text",
+        "label": "Text"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,79 @@
+{% comment %}
+    Render an accordion with images, text and video with product information
+
+    Accepts:
+    - content: {String} Accordion content
+
+    Usage:
+    {%- render 'product-details-accordion', content: accordion_content -%}
+{% endcomment %}
+
+<article class="product-details-accordion">
+  <div class="product-details-accordion__header">
+    <h4 class="product-details-accordion__title">
+      {{ content | first | strip_html }}
+    </h4>
+    <button
+      class="product-details-accordion__button"
+      type="button"
+      aria-label="{{ 'general.accessibility.learn_more' | t }}"
+    >
+    </button>
+  </div>
+  <div class="product-details-accordion__content">
+    {% assign blocks = content | last | split: '[break block]' %}
+    {%- for block in blocks -%}
+      {% liquid
+        assign block_content = block | split: '[break image]'
+        assign tag_video = block | split: '[break video]' | first
+        assign video_text = block | split: '[break video]' | last
+        assign text_content = block_content | first
+        assign image_data = block_content | last | split: '|'
+        assign image_src = image_data | first | strip_html | strip
+        assign image_alt = image_data | last | strip_html
+      %}
+      <div>
+        {%- comment -%}
+          If the accordion contains an image, the img tag will be added
+        {%- endcomment -%}
+        {% if block contains '[break image]' %}
+          <div class="product-details-accordion__text">
+            <p>
+              {{ text_content | remove: '<p>' | remove: '</p>' | newline_to_br }}
+            </p>
+          </div>
+          <figure class="product-details-accordion__image">
+            <img
+              src="{{ image_src | file_img_url: '70x70' }}"
+              width="70"
+              height="70"
+              alt="{{ image_alt }}"
+              loading='lazy'
+            />
+          </figure>
+        {%- comment -%}
+          If the accordion contains a video it is added to the accordion
+        {%- endcomment -%}
+        {%- elsif block contains '[break video]' -%}
+          <iframe
+            width="600"
+            height="360"
+            src="https://www.youtube.com/embed/{{ tag_video | strip_html | split: 'v=' | last }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div class="product-details-accordion__text">
+            {{ video_text | remove: '<p></p>' }}
+          </div>
+        {%- else -%}
+          <div class="product-details-accordion__text">
+            <p>
+               {{ text_content | remove: '<p>' | remove: '</p>' }}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+</article>

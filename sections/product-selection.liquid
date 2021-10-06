@@ -1,0 +1,62 @@
+{%- assign per_row = 4 -%}
+{%- assign product_limit = 4 | times: 1 -%}
+
+<div
+  id="Selection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template">
+
+  <div class="page-width">
+    <h2 class="section-header__title">{{ section.settings.title }}</h2>
+    <div class="grid-overflow-wrapper">
+      <div class="grid grid--uniform">
+        {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+
+        {% case per_row %}
+        {% when 1 %}
+          {%- assign grid_item_width = '' -%}
+        {% when 2 %}
+          {%- assign grid_item_width = 'medium-up--one-half' -%}
+        {% when 3 %}
+          {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+        {% when 4 %}
+          {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+        {% when 5 %}
+          {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
+        {% endcase %}
+        {% assign recommended_products = product.metafields.products.recommended-products | split: '|' %}
+        {% for recommended_products_handle in recommended_products %}
+          {%- assign recommended_product = all_products[recommended_products_handle] -%}
+          {% include 'product-grid-item', product: recommended_product %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sélection produits",
+  "settings": [
+    {
+      "id": "title",
+      "label": "Title",
+      "type": "richtext"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "limit": 3,
+      "settings": [
+        {
+        	"type": "collection",
+        	"id": "collection",
+        	"label": "Collection"
+		    }
+		  ]
+    }
+  ]
+}
+{% endschema %}

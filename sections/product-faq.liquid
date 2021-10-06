@@ -1,0 +1,44 @@
+{%- if section.settings.show_product_faq -%}
+
+  {%- if product.metafields.product_faq.product_faq_code -%}
+  <div class="page-width">
+    <div class="product-faq">
+        {% if section.settings.title %}
+          <header class="section-header">
+            <h3 class="section-header__title">
+              {{ section.settings.title }}
+            </h3>
+          </header>
+        {% endif %}
+		{%- if product.metafields.product_faq.product_faq_intro -%}
+        	<p>{{product.metafields.product_faq.product_faq_intro}}</p>
+        {%- endif -%}
+      	{{product.metafields.product_faq.product_faq_code}}
+    </div>
+  </div>
+  {%- endif -%}
+{%- endif -%}
+{% schema %}
+  {
+    "name": "F.A.Q.",
+    "settings": [
+		
+ 		{
+          "type": "checkbox",
+          "id": "show_product_faq",
+          "label": "Afficher les FAQ du produit"
+      	},
+		{
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

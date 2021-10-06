@@ -1,0 +1,348 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="background-image-custom"
+  class="background-media-text background-media-text--{{ section.id }} background-media-text--fullheight loaded"
+  {% comment %}
+    data-aos="background-media-text__animation"
+  {% endcomment %}
+  >
+
+  
+
+  
+  <section Style=" height: 100%; display : flex; flex-direction: row";>
+    
+    <div Style="flex : 1">
+      {% if section.settings.image != blank and section.settings.image_mobile != blank %}
+        {% style %}
+          .background-media-text__image--{{ section.id }} {
+            object-position: {{ section.settings.focal_point }};
+            font-family: "object-fit: cover; object-position: {{ section.settings.focal_point }};";
+          }
+          .img-mobile{
+              display:none !important;
+          }
+          @media screen and (max-width: 768px) {
+    		.background-media-text__image--{{ section.id }} {
+              object-position: bottom;
+              font-family: "object-fit: cover; object-position: bottom;";
+             }
+            .img-mobile{
+    			display: block !important;
+    		}
+    		.img-desktop{
+    			display: none !important;
+    		}
+          }
+        {% endstyle %}
+
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    	{%- assign img_mobile_url = section.settings.image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+        <img
+          class="image-fit background-media-text__image background-media-text__image--{{ section.id }} img-desktop lazyload"
+          src=""
+          data-src="{{ img_url }}"
+          data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+          data-sizes="auto"
+          data-parent-fit="cover"
+          alt="{{ section.settings.image.alt | escape }}">
+		<img
+          class="image-fit background-media-text__image background-media-text__image--{{ section.id }} img-mobile lazyload"
+          src=""
+          data-src="{{ img_mobile_url }}"
+          data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+          data-sizes="auto"
+          data-parent-fit="cover"
+          alt="{{ section.settings.image.alt | escape }}">	    
+    
+        <noscript>
+          <img
+            class="image-fit background-media-text__image background-media-text__image--{{ section.id }} lazyloaded"
+            src="{{ section.settings.image | img_url: '1800x' }}"
+            alt="{{ section.settings.image.alt }}">
+        </noscript>
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+     {% endif %}
+
+   </div>
+    
+  
+   <div Style="flex : 1">
+      {% if section.settings.image_r != blank and section.settings.image_mobile_r != blank %}
+        {% style %}
+          .background-media-text__image--{{ section.id }} {
+            object-position: {{ section.settings.focal_point_r }};
+            font-family: "object-fit: cover; object-position: {{ section.settings.focal_point_r }};";
+          }
+          .img-mobile{
+              display:none !important;
+          }
+          @media screen and (max-width: 768px) {
+    		.background-media-text__image--{{ section.id }} {
+              object-position: bottom;
+              font-family: "object-fit: cover; object-position: bottom;";
+             }
+            .img-mobile{
+    			display: block !important;
+    		}
+    		.img-desktop{
+    			display: none !important;
+    		}
+          }
+        {% endstyle %}
+
+        {%- assign img_url_r = section.settings.image_r | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    	{%- assign img_mobile_url_r = section.settings.image_mobile_r | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+        <img
+          class="image-fit background-media-text__image background-media-text__image--{{ section.id }} img-desktop lazyload"
+          src=""
+          data-src="{{ img_url_r }}"
+          data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+          data-sizes="auto"
+          data-parent-fit="cover"
+          alt="{{ section.settings.image.alt | escape }}">
+		<img
+          class="image-fit background-media-text__image background-media-text__image--{{ section.id }} img-mobile lazyload"
+          src=""
+          data-src="{{ img_mobile_url_r }}"
+          data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+          data-sizes="auto"
+          data-parent-fit="cover"
+          alt="{{ section.settings.image.alt | escape }}">	    
+    
+        <noscript>
+          <img
+            class="image-fit background-media-text__image background-media-text__image--{{ section.id }} lazyloaded"
+            src="{{ section.settings.image_r | img_url: '1800x' }}"
+            alt="{{ section.settings.image.alt }}">
+        </noscript>
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+     {% endif %}
+
+    </div>
+  </section>
+ 
+  
+  
+  {% if section.settings.subtitle != blank or section.settings.title != blank or section.settings.text != blank %}
+    <div class="background-media-text__inner">
+      <div class="background-media-text__aligner background-media-text--{{ section.settings.layout }}">
+        <div class="animation-cropper">
+          <div class="animation-contents">
+             {% if section.settings.layout == "center" %}
+            	<div class="background-media-text__text" Style="text-align : center">
+             {% else %}
+              	<div class="background-media-text__text">
+             {% endif %}
+                  
+              {% if section.settings.subtitle %}
+                <p class="h5">{{ section.settings.subtitle }}</p>
+              {% endif %}
+              {% if section.settings.title != blank %}
+                <h1 class="h2">{{ section.settings.title | escape }}</h1>
+              {% endif %}
+              {% if section.settings.text != blank %}
+                <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
+              {% endif %}
+              {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+                <a href="{{ section.settings.button_link }}" class="btn">
+                  {{ section.settings.button_label }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="button-scroll bounce">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"></path></svg>
+  </div>
+</div>
+
+<div class="background-media-text__spacer background-media-text--fullheight"></div>
+
+{% schema %}
+  {
+    "name": "Dble image with text full",
+    "class": "index-section--flush background-text-image-custom",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading",
+        "default": "Impressive"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Large image with text box"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+	  {
+        "type": "header",
+        "content": "Left image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+	  {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile"
+      },
+      {
+        "type": "select",
+        "id": "focal_point",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Middle"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+  	  {
+        "type": "header",
+        "content": "Right image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_r",
+        "label": "Image"
+      },
+	  {
+        "type": "image_picker",
+        "id": "image_mobile_r",
+        "label": "Image mobile"
+      },
+      {
+        "type": "select",
+        "id": "focal_point_r",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Middle"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Text on left"
+          },
+		  {
+            "value": "center",
+            "label": "Text centered"
+          },
+          {
+            "value": "right",
+            "label": "Text on right"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Dble Image with text full height",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

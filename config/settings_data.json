@@ -1,0 +1,3665 @@
+{
+  "current": {
+    "color_body_bg": "#fdfdfd",
+    "color_body_text": "#1d1d1c",
+    "color_price": "#1c1d1d",
+    "color_savings_text": "#ff4e4e",
+    "color_borders": "#e8e8e1",
+    "color_button": "#1d1d1c",
+    "color_button_text": "#fff",
+    "color_sale_tag": "#1c1d1d",
+    "color_cart_dot": "#ff4f33",
+    "color_small_image_bg": "rgba(0,0,0,0)",
+    "color_large_image_bg": "#1d1d1c",
+    "color_header": "#fdfdfd",
+    "color_header_text": "#1d1d1c",
+    "color_announcement": "#000000",
+    "color_announcement_text": "#fdfdfd",
+    "color_footer": "#fdfdfd",
+    "color_footer_text": "#1d1d1c",
+    "color_drawer_background": "#fdfdfd",
+    "color_drawer_text": "#1d1d1c",
+    "color_drawer_border": "#e8e8e1",
+    "color_drawer_button": "#1d1d1c",
+    "color_drawer_button_text": "#ffffff",
+    "color_modal_overlays": "#e6e6e6",
+    "color_image_text": "#000000",
+    "color_image_overlay": "#ffffff",
+    "color_image_overlay_opacity": 0,
+    "color_image_overlay_text_shadow": 0,
+    "type_header_font_family": "futura_n4",
+    "type_header_spacing": "0",
+    "type_header_base_size": 60,
+    "type_header_line_height": 1,
+    "type_header_capitalize": true,
+    "type_headers_align_text": true,
+    "type_base_font_family": "futura_n5",
+    "type_base_spacing": "0",
+    "type_base_size": 16,
+    "type_base_line_height": 1.2,
+    "type_body_align_text": true,
+    "type_navigation_style": "body",
+    "type_navigation_size": 13,
+    "type_navigation_capitalize": true,
+    "type_product_style": "body",
+    "type_product_capitalize": true,
+    "type_collection_font": "body",
+    "type_collection_size": 18,
+    "button_style": "square",
+    "icon_weight": "2px",
+    "icon_linecaps": "miter",
+    "vendor_enable": false,
+    "sku_enable": false,
+    "quantity_enable": false,
+    "variant_labels_enable": true,
+    "variant_type": "button",
+    "enable_payment_button": false,
+    "inventory_enable": false,
+    "inventory_threshold": 10,
+    "inventory_transfers_enable": false,
+    "product_save_amount": false,
+    "product_save_type": "dollar",
+    "product_zoom_enable": true,
+    "quick_shop_enable": false,
+    "quick_shop_text": "Aperçu",
+    "product_grid_image_size": "natural",
+    "product_hover_image": true,
+    "product_color_swatches": true,
+    "collection_color_swatches": false,
+    "swatch_style": "round",
+    "trust_image": "",
+    "product_content_1": "",
+    "product_content_collapse_1": true,
+    "product_content_2": "",
+    "product_content_collapse_2": true,
+    "product_content_3": "",
+    "product_content_collapse_3": true,
+    "product_contact": false,
+    "product_contact_title": "Poser une question",
+    "product_contact_show_phone": false,
+    "enable_product_reviews": false,
+    "reviews_layout": "expandable",
+    "collection_grid_style": "overlaid-box",
+    "collection_grid_shape": "landscape",
+    "collection_grid_image": "collection",
+    "collection_grid_text_align": "left",
+    "collection_grid_tint": "#000000",
+    "collection_grid_opacity": 10,
+    "collection_grid_gutter": true,
+    "cart_type": "drawer",
+    "cart_icon": "bag",
+    "cart_additional_buttons": false,
+    "cart_notes_enable": false,
+    "cart_terms_conditions_enable": false,
+    "cart_terms_conditions_link": "shopify:\/\/policies\/terms-of-sale",
+    "cart_recommendations_icon": "shopify:\/\/shop_images\/box.png",
+    "cart_recommendations_title": "5€ offerts",
+    "cart_recommendations_text": "sur votre 1ère commande avec le code OCTOBRE21 dès 39,90€ d'achat",
+    "cart_recommendations_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/la.creme.libre",
+    "social_twitter_link": "",
+    "social_pinterest_link": "https:\/\/www.pinterest.fr\/lacremelibre\/_saved\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/la.creme.libre\/?hl=fr",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/la-cr%C3%A8me-libre\/?viewAsMember=true",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCuvSL83rFWw9qRuCSgYdWyA",
+    "social_vimeo_link": "",
+    "share_facebook": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "homepage_social_image": "",
+    "favicon": "shopify:\/\/shop_images\/La-creme-libre-logo.png",
+    "search_enable": true,
+    "search_type": "product",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "predictive_image_size": "square",
+    "show_breadcrumbs": true,
+    "colors_options": "blanc-casse\/#F2F6F6;gris-beton\/#C1C3C8;anthracite\/#4F4F4F;taupe\/#BBB6B2;beige-rose\/#E2CEC3;terracotta\/#D09875;bleu-mineral\/#567990;vert-canard\/#6E908D;",
+    "checkout_header_image": "shopify:\/\/shop_images\/fond-lcl.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/La-creme-libre-logo.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f3f5f3",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#ca9090",
+    "checkout_button_color": "#111111",
+    "checkout_error_color": "#ff6d6d",
+    "breadcrumb": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "1524770014057": {
+            "type": "logo",
+            "settings": {
+              "logo": "luneale-logo.svg",
+              "logo-inverted": "shopify:\/\/shop_images\/La-creme-libre-logo---white.png",
+              "desktop_logo_width": 270,
+              "mobile_logo_width": 100
+            }
+          },
+          "1601029505599": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "1",
+              "title": "Les eco-recharges",
+              "menu": "main-menu-les-eco-recharges",
+              "type_of_submenu": "links",
+              "image": "shopify:\/\/shop_images\/la_creme_libre_recharges.jpg",
+              "image_position": "top"
+            }
+          },
+          "1601044045776": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "1",
+              "title": "Les pots réutilisables",
+              "menu": "main-menu-les-pots-r-utilisables",
+              "type_of_submenu": "links",
+              "image": "shopify:\/\/shop_images\/la_creme_libre_pots_93f9dd4b-ff17-4ba1-be48-ced678def6a1.jpg",
+              "image_position": "top"
+            }
+          },
+          "1601047229859": {
+            "type": "sub_menu",
+            "disabled": true,
+            "settings": {
+              "parent_id": "1",
+              "title": "Cadeaux",
+              "menu": "main-menu-cadeux",
+              "type_of_submenu": "links",
+              "image": "shopify:\/\/shop_images\/la-creme-libre-carte-cadeau-thumbnail.jpg",
+              "image_position": "top"
+            }
+          },
+          "85617d17-12f9-42bb-9ca8-ce1e2316c4bf": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "2",
+              "title": "",
+              "menu": "main-menu-nettoyants",
+              "type_of_submenu": "product",
+              "image_position": "top"
+            }
+          },
+          "4bc4d623-7150-4edf-986b-227f268e427c": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "3",
+              "title": "Main menu - Démaquillants",
+              "menu": "main-menu-d-maquillants",
+              "type_of_submenu": "product",
+              "image_position": "top"
+            }
+          },
+          "a2696acb-3000-4d74-b5d9-e1a02f36db26": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "4",
+              "title": "Main menu - Exfoliants",
+              "menu": "main-menu-exfoliants",
+              "type_of_submenu": "product",
+              "image_position": "top"
+            }
+          },
+          "e94b84a5-da99-472a-8467-0910e89bef50": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "5",
+              "title": "Main menu - Hydratants",
+              "menu": "main-menu-hydratants",
+              "type_of_submenu": "product",
+              "image_position": "top"
+            }
+          },
+          "e8665cb1-f634-4534-ae66-c867298708cb": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "6",
+              "title": "Quiz personnalisé",
+              "menu": "main-menu-routine-personnalis-e",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/questionnaire-personnalise.jpg",
+              "image_position": "top"
+            }
+          },
+          "aa44d32d-acf3-4802-bf1d-aebefe386357": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "6",
+              "title": "Conseils beauté",
+              "menu": "conseils-beaut",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/la_creme_libre_vignette_video_exfoliant_masque.jpg",
+              "image_position": "top"
+            }
+          },
+          "3b8ee020-f4ae-4cdf-a8e4-b5d5c6973d68": {
+            "type": "sub_menu",
+            "disabled": true,
+            "settings": {
+              "parent_id": "7",
+              "title": "COFFRETS CADEAUX",
+              "menu": "main-menu-coffrets-cadeaux-2",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/coffrets-cadeaux-1.jpg",
+              "image_position": "top"
+            }
+          },
+          "1154249c-9285-48de-9870-4a5df696cd81": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "7",
+              "title": "J’OFFRE UNE CARTE CADEAU",
+              "menu": "main-menu-coffrets-cadeaux-1",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/la-creme-libre-carte-cadeau-thumbnail.jpg",
+              "image_position": "top"
+            }
+          },
+          "69c286d8-be32-49c0-9728-43b8bb952f58": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "7",
+              "title": "J’UTILISE MA CARTE CADEAU",
+              "menu": "main-menu-coffrets-cadeaux-2",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/coffrets-cadeaux-3.jpg",
+              "image_position": "top"
+            }
+          },
+          "1859ee94-bcc9-4db8-aecb-57fc96d5577e": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "8",
+              "title": "Missions",
+              "menu": "main-menu-nos-missions",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/nos-missions.jpg",
+              "image_position": "top"
+            }
+          },
+          "61e0ced4-0f63-426f-a2c5-6695727978f5": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "8",
+              "title": "Ingrédients naturels",
+              "menu": "main-menu-nos-ingr-dients-naturels",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/nos-ingredients_naturels.jpg",
+              "image_position": "top"
+            }
+          },
+          "a0a516ba-68f9-49af-88b9-b79b551f6ae3": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "8",
+              "title": "Emballages éco-conçus",
+              "menu": "main-menu-nos-emballages-co-con-us",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/nos-emballages-eco-concus.jpg",
+              "image_position": "top"
+            }
+          },
+          "27bc43d4-14c9-49d6-afdd-48e92d199382": {
+            "type": "sub_menu",
+            "settings": {
+              "parent_id": "8",
+              "title": "Engagement en France",
+              "menu": "main-menu-notre-engagement-en-france",
+              "type_of_submenu": "page",
+              "image": "shopify:\/\/shop_images\/notre-engagement-en-france.jpg",
+              "image_position": "top"
+            }
+          },
+          "35c09ece-ed4e-412a-88a5-be80e196af4a": {
+            "type": "announcement",
+            "settings": {
+              "text": "Livraison offerte",
+              "link_text": "en France Métropolitaine dès 30€ d’achat",
+              "link": ""
+            }
+          },
+          "2a547892-a3ec-4c0c-b517-edc764967529": {
+            "type": "announcement",
+            "settings": {
+              "text": "5€ OFFERTS",
+              "link_text": "sur votre 1ère commande avec le code OCTOBRE21 dès 39,90€ d'achat",
+              "link": ""
+            }
+          },
+          "0cda99c6-01e7-42a1-9f30-84d8298ffccc": {
+            "type": "announcement",
+            "settings": {
+              "text": "POT VOYAGE OFFERT",
+              "link_text": "pot en verre de 15ml à remplir,  offert pour toute commande sur le site",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1524770014057",
+          "1601029505599",
+          "1601044045776",
+          "1601047229859",
+          "85617d17-12f9-42bb-9ca8-ce1e2316c4bf",
+          "4bc4d623-7150-4edf-986b-227f268e427c",
+          "a2696acb-3000-4d74-b5d9-e1a02f36db26",
+          "e94b84a5-da99-472a-8467-0910e89bef50",
+          "e8665cb1-f634-4534-ae66-c867298708cb",
+          "aa44d32d-acf3-4802-bf1d-aebefe386357",
+          "3b8ee020-f4ae-4cdf-a8e4-b5d5c6973d68",
+          "1154249c-9285-48de-9870-4a5df696cd81",
+          "69c286d8-be32-49c0-9728-43b8bb952f58",
+          "1859ee94-bcc9-4db8-aecb-57fc96d5577e",
+          "61e0ced4-0f63-426f-a2c5-6695727978f5",
+          "a0a516ba-68f9-49af-88b9-b79b551f6ae3",
+          "27bc43d4-14c9-49d6-afdd-48e92d199382",
+          "35c09ece-ed4e-412a-88a5-be80e196af4a",
+          "2a547892-a3ec-4c0c-b517-edc764967529",
+          "0cda99c6-01e7-42a1-9f30-84d8298ffccc"
+        ],
+        "settings": {
+          "main_menu_link_list": "main-menu-1",
+          "mega_menu_images": true,
+          "main_menu_alignment": "center-left",
+          "header_style": "sticky",
+          "sticky_index": false,
+          "sticky_collection": false,
+          "announcement_compact": true,
+          "announcement_above_header": true,
+          "toolbar_menu": "contactez-nous",
+          "toolbar_text": "",
+          "toolbar_social": true,
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "show_currency_flags": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1597325663013": {
+            "type": "reassurance",
+            "settings": {
+              "title": "Allô la crème libre",
+              "text": "Contactez-nous au 06 08 13 58 85",
+              "url": "https:\/\/wa.me\/33608135885"
+            }
+          },
+          "1597325700259": {
+            "type": "reassurance",
+            "settings": {
+              "title": "Livraison offerte",
+              "text": "Dès 39€ d'achat",
+              "url": "shopify:\/\/policies\/shipping-policy"
+            }
+          },
+          "1597325733333": {
+            "type": "reassurance",
+            "settings": {
+              "title": "Retour gratuit",
+              "text": "On vous explique la démarche",
+              "url": "shopify:\/\/policies\/shipping-policy"
+            }
+          },
+          "1597325755466": {
+            "type": "reassurance",
+            "settings": {
+              "title": "Paiement sécurisé",
+              "text": "CB \/ Visa \/ Mastercard \/ Paypal",
+              "url": "shopify:\/\/policies\/terms-of-sale"
+            }
+          },
+          "1494301487048": {
+            "type": "logo_social",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/logo-creme-libre_x2_e828f9c3-55da-4b86-862f-4a5703ac3eae.png",
+              "desktop_logo_height": 120,
+              "container_width": 20
+            }
+          },
+          "1597159162342": {
+            "type": "custom",
+            "settings": {
+              "show_footer_title": false,
+              "title": "",
+              "text": "<p>Chez La Crème Libre, nous sommes persuadées que revenir à une consommation plus raisonnée est une question de bon sens et non de sacrifices. Notre équipe de passionnées a créé la première gamme complète de soins visage rechargeables, aux actifs naturels, clean et français, pour votre plus grand plaisir et celui de la planète.<\/p>",
+              "container_width": 25
+            }
+          },
+          "1597159207268": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": true,
+              "menu": "footer",
+              "container_width": 15
+            }
+          },
+          "1597159240533": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": true,
+              "menu": "menu-pied-de-page-2",
+              "container_width": 15
+            }
+          },
+          "8326da04-da5e-44f7-92a9-f97186fe961d": {
+            "type": "newsletter",
+            "settings": {
+              "show_footer_title": true,
+              "title": "Newsletter",
+              "text": "<p>Votre adresse email est utilisée par La Crème Libre à des fins de prospection commerciale (nouveautés, actualités, ...). Vous pouvez en savoir davantage <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">sur notre politique de confidentialité. <\/a><\/p>",
+              "container_width": 25
+            }
+          }
+        },
+        "block_order": [
+          "1597325663013",
+          "1597325700259",
+          "1597325733333",
+          "1597325755466",
+          "1494301487048",
+          "1597159162342",
+          "1597159207268",
+          "1597159240533",
+          "8326da04-da5e-44f7-92a9-f97186fe961d"
+        ],
+        "settings": {
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "show_currency_flags": false,
+          "show_payment_icons": false,
+          "social_networks_text": "REJOIGNEZ @LA.CREME.LIBRE",
+          "show_copyright": true,
+          "copyright_text": "Le site La Crème Libre® a été créé et développé en France",
+          "copyright_image": "shopify:\/\/shop_images\/flag-fr.jpg"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "description_position": "top",
+          "subcollection_style": "above",
+          "subcollections_per_row": 5,
+          "enable_collection_count": true,
+          "per_row": 4,
+          "rows_per_page": 7,
+          "mobile_flush_grid": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "description_style": "default",
+          "social_enable": true,
+          "image_position": "left",
+          "image_size": "large",
+          "thumbnail_position": "below",
+          "thumbnail_arrows": false,
+          "enable_video_looping": true,
+          "product_video_style": "muted",
+          "show_product_associated": false,
+          "product_associated_icon": "shopify:\/\/shop_images\/box.png",
+          "product_associated_title": "",
+          "product_associated_text": "5€ Offerts sur votre première commande avec le code OCTOBRE21",
+          "secure_payments_icon": "padlock-icon.svg|Padlock icon",
+          "secure_payments_text": "PAIEMENTS SECURISÉS : Paypal - Apple Pay - Visa - Mastercard - Amex"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "image_hero": true,
+          "blog_show_tags": false,
+          "blog_show_date": false,
+          "blog_show_comments": false,
+          "blog_show_author": false,
+          "social_sharing_blog": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "blog_show_tag_filter": false,
+          "blog_show_rss": false,
+          "blog_show_tags": true,
+          "blog_show_date": false,
+          "blog_show_comments": true,
+          "blog_show_author": false,
+          "blog_show_excerpt": true,
+          "blog_image_size": "square"
+        }
+      },
+      "product-sections-template": {
+        "type": "product-sections-template",
+        "blocks": {
+          "product-image-row": {
+            "type": "image-row",
+            "settings": {
+              "image_1": "",
+              "image_1_link": "",
+              "image_2": "",
+              "image_2_link": "",
+              "image_3": "",
+              "image_3_link": "",
+              "image_4": "",
+              "image_4_link": "",
+              "enable_gutter": false,
+              "enable_zoom": true
+            }
+          },
+          "product-text-and-image": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "",
+              "image_width": 500,
+              "subtitle": "Improved",
+              "title": "Image with text",
+              "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+              "button_label": "Optional button",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "product-background-image-text": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "Impressive",
+              "title": "Large image with text box",
+              "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "image": "",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "right",
+              "height": 550,
+              "parallax": true
+            }
+          },
+          "product-text-columns": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": true,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "Example title",
+              "text_1": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "",
+              "image_width_2": 650,
+              "title_2": "Example title",
+              "text_2": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": true,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "Example title",
+              "text_3": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "product-hero-video": {
+            "type": "hero-video",
+            "settings": {
+              "title": "Bring your\nbrand to life.",
+              "title_size": 80,
+              "subheading": "Seamless hero videos",
+              "link_text": "Optional button",
+              "link": "",
+              "text_align": "vertical-bottom horizontal-left",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+              "section_height": "650px",
+              "mobile_height": "auto"
+            }
+          }
+        },
+        "block_order": [
+          "product-image-row",
+          "product-text-and-image",
+          "product-background-image-text",
+          "product-text-columns",
+          "product-hero-video"
+        ],
+        "settings": {
+          "description_style": "default",
+          "social_enable": true,
+          "image_position": "right",
+          "image_size": "medium",
+          "thumbnail_position": "beside",
+          "thumbnail_arrows": false,
+          "enable_video_looping": true,
+          "product_video_style": "muted"
+        }
+      },
+      "page-sections-template": {
+        "type": "page-sections-template",
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": true
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "mode": "disabled",
+          "popup_seconds": 10,
+          "popup_days": 30,
+          "popup_title": "",
+          "popup_image": "shopify:\/\/shop_images\/Popup_50f4fc31-f118-45e7-a9f3-f2e7db1cf5a2.jpg",
+          "popup_text": "",
+          "close_text": "Fermer",
+          "enable_newsletter": false,
+          "button_label": "J'en profite",
+          "button_link": "shopify:\/\/collections\/all",
+          "enable_button": true
+        }
+      },
+      "collection-header": {
+        "type": "collection-header",
+        "settings": {
+          "enable": true,
+          "collection_image_enable": true,
+          "parallax": true
+        }
+      },
+      "collection-sidebar": {
+        "type": "collection-sidebar",
+        "blocks": {
+          "26ce9245-87a2-40e4-9dbe-9d28eea1820c": {
+            "type": "tags_group",
+            "settings": {
+              "title": "Gestes beauté",
+              "tag_list": "Nettoyer\nDémaquiller\nExfolier\nHydrater",
+              "collapsed": false
+            }
+          },
+          "c57b8eab-6572-4139-a10b-05316997cad2": {
+            "type": "tags_group",
+            "settings": {
+              "title": "Pots béton",
+              "tag_list": "Pot Béton pour Hydratants et Exfoliants\nPot Béton pour Nettoyants et Démaquillants",
+              "collapsed": false
+            }
+          }
+        },
+        "block_order": [
+          "26ce9245-87a2-40e4-9dbe-9d28eea1820c",
+          "c57b8eab-6572-4139-a10b-05316997cad2"
+        ],
+        "settings": {
+          "enable_sidebar": true,
+          "filter_style": "drawer",
+          "tags_combine": false,
+          "enable_sort": false
+        }
+      },
+      "collection-promotions": {
+        "type": "collection-promotions",
+        "blocks": {
+          "390bf5c8-da0c-41e2-9a29-dd102241eba8": {
+            "type": "advanced",
+            "settings": {
+              "promo_collection": "",
+              "subheading": "",
+              "heading": "Vous ne savez pas quel produit choisir ?",
+              "textarea": "Obtenez votre routine personnalisée en répondant à ce court questionnaire.",
+              "cta_text1": "c'est ici !",
+              "cta_link1": "https:\/\/lacremelibre.com\/pages\/routine-personnalisee",
+              "cta_text2": "",
+              "image": "shopify:\/\/shop_images\/Test-routine-personnalisee.gif",
+              "video_url": "",
+              "width": "100",
+              "height": 300,
+              "text_size": 120,
+              "text_align": "vertical-center horizontal-center",
+              "focal_point": "center",
+              "color_accent": "#fdfdfd",
+              "boxed": false,
+              "framed": false
+            }
+          }
+        },
+        "block_order": [
+          "390bf5c8-da0c-41e2-9a29-dd102241eba8"
+        ],
+        "settings": {
+          "gutter_size": 20
+        }
+      },
+      "footer-promotions": {
+        "type": "footer-promotions",
+        "settings": {
+          "hide_homepage": true,
+          "image_size": "wide"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "product_recommendations_heading": "You may also like",
+          "related_count": 5
+        }
+      },
+      "recently-viewed": {
+        "type": "recently-viewed",
+        "settings": {
+          "show_section": false,
+          "recent_count": 5
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "64906cde-4f10-4054-93ca-e153c799864d": {
+            "type": "collection",
+            "settings": {
+              "collection": "recharges"
+            }
+          },
+          "11420c7e-bbc8-4a4c-99e3-a46b1e5c09fc": {
+            "type": "collection",
+            "settings": {
+              "collection": "pots-beton-classique"
+            }
+          }
+        },
+        "block_order": [
+          "64906cde-4f10-4054-93ca-e153c799864d",
+          "11420c7e-bbc8-4a4c-99e3-a46b1e5c09fc"
+        ],
+        "settings": {
+          "title_enable": true,
+          "display_type": "selected",
+          "sort": "alphabetical",
+          "grid": "2"
+        }
+      },
+      "1597156387939": {
+        "type": "blog-posts",
+        "settings": {
+          "title": "Nos conseils en béton !",
+          "text": "Pour simplifier votre routine beauté.",
+          "blog": "journal",
+          "post_limit": 3,
+          "blog_show_tags": false,
+          "blog_show_date": false,
+          "blog_show_comments": false,
+          "blog_show_author": false,
+          "blog_show_excerpt": true,
+          "view_all": false,
+          "blog_image_size": "square",
+          "divider": false
+        }
+      },
+      "1597158090451": {
+        "type": "testimonials",
+        "blocks": {
+          "1597158090451-0": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"La poudre nettoyante qui a changé notre peau mixte et sensible ! Au-delà de l'efficacité du produit, on a aussi craqué pour la finesse de sa mousse, facile à étaler.\"<\/strong><\/p>",
+              "author": "Version Femina, août 2021"
+            }
+          },
+          "1597158090451-1": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Les pots sont remplis de recharges et peuvent être utilisés à l'infini, ce qui les rend non seulement écologiques mais aussi économiques.\"<\/strong><\/p>",
+              "author": "Vogue Japan, Juin 2021"
+            }
+          },
+          "1597158090451-2": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Ces soins à recharger sont [...] parfaits pour épurer sa routine et pimper ses étagères beauté.\"<\/strong><\/p>",
+              "author": "Elle, Printemps 2021"
+            }
+          },
+          "1597664003674": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Une formule bien ficelée, un pack rechargeable et un pot en béton canon : cette jeune marque promet !\"<\/strong><\/p>",
+              "author": "Voici, avril 2021"
+            }
+          },
+          "1597665862607": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Pour les produits de soin, le minimaliste passe crème. Made in France, La Crème Libre propose une gamme simple de démaquillants et de soins naturels présentés dans des pots en béton rechargeables.\"<\/strong><\/p>",
+              "author": "Le monde, avril 2021"
+            }
+          },
+          "1597665866889": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Parmi les 5 coups de coeur beauté green du mois, La Crème Libre, une ligne de 10 soins visages répartis en 3 gestes (nettoyer, exfolier, hydrater), 100% rechargeables et Made in France.\"<\/strong><\/p>",
+              "author": "Gala, Mars 2021"
+            }
+          },
+          "1597665873075": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"Parmi les 8 astuces pour améliorer l'efficacité de sa routine de soins : une crème hydratante La Crème Libre pour nourrir et apaiser la peau sensibilisée.\"<\/strong><\/p>",
+              "author": "Aufeminin, Mars 2021"
+            }
+          },
+          "1597665876545": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"La Crème Libre, une marque vraiment béton ! Pour mettre en avant le terroir français, les actifs sélectionnés proviennent de 12 départements et régions très différentes.\"<\/strong><\/p>",
+              "author": "Beauté Test, Mars 2021"
+            }
+          },
+          "1597665880041": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"10 soins rechargeables pour une salle de bain écolo. La marque offre la possibilité de choisir parmi 8 pots en béton pour décorer votre salle de bain selon vos goûts.\"<\/strong><\/p>",
+              "author": "Doctissimo, mars 2021"
+            }
+          },
+          "1597667380002": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><strong>\"La Crème Libre, une marque de soins naturels et français, 100% rechargeables. Les pots sont hyper jolis, ils s'intègrent dans une salle de bain. Un packaging sobre mais très design.\"<\/strong><\/p>",
+              "author": "Europe 1, Janvier 2021"
+            }
+          }
+        },
+        "block_order": [
+          "1597158090451-0",
+          "1597158090451-1",
+          "1597158090451-2",
+          "1597664003674",
+          "1597665862607",
+          "1597665866889",
+          "1597665873075",
+          "1597665876545",
+          "1597665880041",
+          "1597667380002"
+        ],
+        "settings": {
+          "title": "ILS EN PARLENT LIBREMENT !",
+          "align_text": "center",
+          "round_images": false,
+          "divider": false
+        }
+      },
+      "1597158621439": {
+        "type": "logo-list",
+        "blocks": {
+          "1597158635079": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo-instagram.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1597158635079"
+        ],
+        "settings": {
+          "title": "",
+          "logo_opacity": 100,
+          "divider": true
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/La-creme-libre-logo.png",
+          "desktop_logo_height": 120,
+          "mobile_logo_height": 100
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "title": "DISPONIBLE EN PRECOMMANDE",
+          "newsletter_enable": true,
+          "newsletter_heading": "<p><\/p><p><strong>Soins rechargeables, naturels, pour tous, faits en France 🌱<\/strong><br\/><br\/>Nos produits sont disponibles en précommande 👉🏻 <a href=\"https:\/\/fr.ulule.com\/lacremelibre\/?utm_campaign=presale_115699&amp;utm_source=eshop&amp;utm_medium=siteweb\" title=\"https:\/\/fr.ulule.com\/lacremelibre\/?utm_campaign=presale_115699&amp;utm_source=eshop&amp;utm_medium=siteweb\">en savoir plus<\/a><\/p><p><a href=\"https:\/\/fr.ulule.com\/lacremelibre\/?utm_campaign=presale_115699&amp;utm_source=eshop&amp;utm_medium=siteweb\" target=\"_blank\" title=\"Précommander sur Ulule\">Pré-commander<\/a><br\/><br\/>Suivez notre aventure sur <a href=\"https:\/\/www.instagram.com\/la.creme.libre\/?hl=fr\" title=\"https:\/\/www.instagram.com\/la.creme.libre\/?hl=fr\">Instagram<\/a>, <a href=\"https:\/\/www.facebook.com\/la.creme.libre\" title=\"https:\/\/www.facebook.com\/la.creme.libre\">Facebook<\/a> et <a href=\"https:\/\/www.linkedin.com\/company\/la-cr%C3%A8me-libre\/?viewAsMember=true\" title=\"https:\/\/www.linkedin.com\/company\/la-cr%C3%A8me-libre\/?viewAsMember=true\">Linkedin<\/a> et inscrivez-vous à notre newsletter !<\/p><p><\/p>",
+          "newsletter_placeholder": "Email",
+          "newsletter_button_text": "Envoyer",
+          "show_share_buttons": false,
+          "show_image": true,
+          "image": "shopify:\/\/shop_images\/WhatsApp_Image_2020-12-01_at_14.06.34.jpg"
+        }
+      },
+      "collection-header-ldw": {
+        "type": "collection-header-ldw",
+        "settings": {
+          "enable": true,
+          "collection_image_enable": true,
+          "parallax": false
+        }
+      },
+      "collection-template-ldw": {
+        "type": "collection-template-ldw",
+        "settings": {
+          "subcollection_style": "none",
+          "subcollections_per_row": 5,
+          "enable_collection_count": false,
+          "per_row": 2,
+          "rows_per_page": 7,
+          "mobile_flush_grid": false
+        }
+      },
+      "1597741283286": {
+        "type": "featured-products",
+        "disabled": true,
+        "blocks": {
+          "1597741799648": {
+            "type": "collection",
+            "settings": {
+              "collection": "nettoyer"
+            }
+          },
+          "1597744232757": {
+            "type": "collection",
+            "settings": {
+              "collection": "exfolier"
+            }
+          },
+          "1597745069853": {
+            "type": "collection",
+            "settings": {
+              "collection": "hydrater"
+            }
+          }
+        },
+        "block_order": [
+          "1597741799648",
+          "1597744232757",
+          "1597745069853"
+        ],
+        "settings": {
+          "title": "Rechargez votre peau en 3 gestes",
+          "text": "<p>Fini les étagères de salle de bain surchargées ! <br\/>Nous vous proposons une nouvelle routine beauté courte et écologique, pour nettoyer et hydrater votre peau. Nos produits sont multizones, multifonctions et conviennent à toute la famille.<\/p>",
+          "button_label": "Je les veux",
+          "button_link": "shopify:\/\/collections\/recharges"
+        }
+      },
+      "product-ingredients": {
+        "type": "product-ingredients",
+        "settings": {
+          "complete_title": "Liste complète des ingrédients",
+          "bar_code_title": "Liste complète des ingrédients",
+          "bar_code_text": "Sentez-vous libre de décrypter la composition de ce produit en scannant son code barre sur l'application de votre choix !"
+        }
+      },
+      "product-advice": {
+        "type": "product-advice",
+        "settings": {
+        }
+      },
+      "product-selection": {
+        "type": "product-selection",
+        "blocks": {
+          "1597913044530": {
+            "type": "collection",
+            "settings": {
+              "collection": "nettoyer"
+            }
+          },
+          "1597913055727": {
+            "type": "collection",
+            "settings": {
+              "collection": "exfolier"
+            }
+          },
+          "1597913064837": {
+            "type": "collection",
+            "settings": {
+              "collection": "hydrater"
+            }
+          }
+        },
+        "block_order": [
+          "1597913044530",
+          "1597913055727",
+          "1597913064837"
+        ],
+        "settings": {
+          "title": "<p>Vous aimerez aussi<\/p>"
+        }
+      },
+      "product-use": {
+        "type": "product-use",
+        "settings": {
+          "title": "Conseils d'utilisation",
+          "step_1": "Au début",
+          "step_2": "Puis",
+          "step_3": "Et",
+          "step_4": "Pour finir",
+          "precautions_title": "Précautions d'emploi :",
+          "other_uses_title": "Autres utilisations"
+        }
+      },
+      "product-reinsurance": {
+        "type": "product-reinsurance",
+        "blocks": {
+          "1599734431929": {
+            "type": "reinsurance_recharge",
+            "settings": {
+              "product_reinsurance_recharge_title": "100%",
+              "product_reinsurance_recharge_subtitle": "naturelle et efficace",
+              "product_reinsurance_recharge_text": "<p>Ingrédients 100% d&#x27;origine naturelle. Végan.<\/p><p>Parfums 100% naturels, sans allergènes étiquettables et sans huiles essentielles. <\/p><p>Sans ingrédients controversés. <\/p><p>Certifié Cosmos Natural par Ecocert.<\/p><p>Excellents sur l&#x27;application Yuka. <\/p>"
+            }
+          },
+          "1599734503510": {
+            "type": "reinsurance_recharge",
+            "settings": {
+              "product_reinsurance_recharge_title": "100%",
+              "product_reinsurance_recharge_subtitle": "Rechargeable et design",
+              "product_reinsurance_recharge_text": "<p>Gamme 100% en recharge.<\/p><p>Les recharges sont en plastique, dont 25% biosourcé et recyclables.<\/p><p>Les emballages sont en carton recyclé et recyclable, sans colle.<\/p>"
+            }
+          },
+          "1599734528013": {
+            "type": "reinsurance_recharge",
+            "settings": {
+              "product_reinsurance_recharge_title": "100%",
+              "product_reinsurance_recharge_subtitle": "Pour tous",
+              "product_reinsurance_recharge_text": "<p>Convient à tous les types de peaux même sensibles.<\/p><p>Unisexe.<\/p><p>Convient aux femmes enceintes et allaitantes, et aux enfants de plus de 3 ans.<\/p><p><\/p>"
+            }
+          },
+          "1599734541345": {
+            "type": "reinsurance_recharge",
+            "settings": {
+              "product_reinsurance_recharge_title": "100%",
+              "product_reinsurance_recharge_subtitle": "Français",
+              "product_reinsurance_recharge_text": "<p>Actifs 100% issus du sol français.<\/p><p>Recharges et emballages de provenance française.<\/p><p>Tous nos partenaires sont basés en France. <\/p><p>Un concentré de savoir faire Français.<\/p>"
+            }
+          },
+          "214e493b-c161-41b3-80f6-5f1760839cf2": {
+            "type": "reinsurance_pot",
+            "settings": {
+              "product_reinsurance_pot_title": "100%",
+              "product_reinsurance_pot_subtitle": "naturels",
+              "product_reinsurance_pot_text": "<p>Nos pots sont faits en béton. Il est composé de ciment blanc, de sable fin blanc auxquels on ajoute des pigments naturels pour la couleur et le reste, c’est de l’eau ! 100% des matériaux sont naturels, il est donc biodégradable. De plus, il est protégé avec un vernis alimentaire et du liège, il n’y a donc aucun risque pour la santé si la crème est en contact avec le pot.<\/p>"
+            }
+          },
+          "88c71886-0f56-4cd3-b894-c49c11eefc17": {
+            "type": "reinsurance_pot",
+            "settings": {
+              "product_reinsurance_pot_title": "100%",
+              "product_reinsurance_pot_subtitle": "Rechargeables et design",
+              "product_reinsurance_pot_text": "<p>Nous étions à la recherche d’un pot éco-responsable, durable et fabriqué en France; on désespérait de ne pas le trouver ! Et en tombant sur des bougies en béton qu’on trouvait canon, on s’est dit pourquoi ne pas faire ça en cosmétiques ! On a donc décidé de réinventer le pot cosmétique en véritable objet de décoration. <\/p>"
+            }
+          },
+          "6a448572-4f1a-480f-bfd1-57520d165980": {
+            "type": "reinsurance_pot",
+            "settings": {
+              "product_reinsurance_pot_title": "100%",
+              "product_reinsurance_pot_subtitle": "pour tous",
+              "product_reinsurance_pot_text": "<p>L&#x27;objectif est que ces pots soient réutilisés à l’infini pour qu&#x27;ils ne soient jamais jetés.<\/p><p>Après une première utilisation en tant que pot cosmétique, vous pouvez par la suite leur donner 1001 vies. La seule limite est votre imagination !<\/p>"
+            }
+          },
+          "c2e0bd82-528e-4e0d-b570-42d1604c4ab1": {
+            "type": "reinsurance_pot",
+            "settings": {
+              "product_reinsurance_pot_title": "100%",
+              "product_reinsurance_pot_subtitle": "français",
+              "product_reinsurance_pot_text": "<p>Le choix du béton est :  <\/p><p>Esthétique : matière à fini brut, intemporelle qu’on trouve en décoration. <\/p><p>Environnemental : matière 100% naturelle et biodégradable, le béton est fait de ciment blanc, sable fin, pigments naturels et eau. <\/p><p>Artisanal : chaque pot est fait à la main dans un atelier en Champagne-Ardenne. <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1599734431929",
+          "1599734503510",
+          "1599734528013",
+          "1599734541345",
+          "214e493b-c161-41b3-80f6-5f1760839cf2",
+          "88c71886-0f56-4cd3-b894-c49c11eefc17",
+          "6a448572-4f1a-480f-bfd1-57520d165980",
+          "c2e0bd82-528e-4e0d-b570-42d1604c4ab1"
+        ],
+        "settings": {
+          "product_reinsurance_recharge_heading": "Nos recharges sont :",
+          "product_reinsurance_pot_heading": "Nos pots sont :",
+          "product_reinsurance_lifestyle_heading": ""
+        }
+      },
+      "1601045375359": {
+        "type": "maestrooo-instagram",
+        "settings": {
+          "title": "#LACREMELIBRE",
+          "subheading": "<p>Suivez nos aventures et nos actualités (en béton !) sur Instagram...<\/p>",
+          "button_text": "Je rejoins la communauté",
+          "button_link": "https:\/\/www.instagram.com\/la.creme.libre\/",
+          "layout": "sliding_carousel",
+          "image_size": "small",
+          "full_width": false,
+          "add_spacing": true,
+          "rows_count": 2,
+          "show_author": false,
+          "show_caption": true,
+          "show_date": true,
+          "click_action": "open_instagram",
+          "heading_color": "#000000",
+          "subheading_color": "#000000",
+          "button_background": "#000000",
+          "button_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_text_color": "#ffffff",
+          "overlay_opacity": 65
+        }
+      },
+      "page-contact-template": {
+        "type": "page-contact-template",
+        "blocks": {
+          "page-contact-template-0": {
+            "type": "contact-form",
+            "settings": {
+              "title": "Nous écrire",
+              "show_phone": true,
+              "narrow_column": true
+            }
+          }
+        },
+        "block_order": [
+          "page-contact-template-0"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": true
+        }
+      },
+      "product-judgeme-reviews": {
+        "type": "product-judgeme-reviews",
+        "settings": {
+        }
+      },
+      "product-faq": {
+        "type": "product-faq",
+        "settings": {
+          "show_product_faq": true,
+          "title": "FAQ"
+        }
+      },
+      "collection-header-ldw-2": {
+        "type": "collection-header-ldw-2",
+        "settings": {
+          "enable": true,
+          "collection_image_enable": true,
+          "parallax": false
+        }
+      },
+      "product-manual": {
+        "type": "product-manual",
+        "settings": {
+          "product_manual_heading": "Comment ça marche",
+          "product_manual_text": "<p>Choisissez votre recharge parmi notre gamme de 10 soins visage répartis en 3 gestes (nettoyer, exfolier et hydrater). Nos formules sont naturelles et véganes, sans ingrédient controversé, certifiées Cosmos Natural par Ecocert. <\/p><p>Puis sélectionnez votre pot parmi notre collection de 8 couleurs. Notre pot en béton est composé de ciment blanc, de sable fin auxquels on ajoute des pigments naturels pour la couleur et le reste, c&#x27;est de l&#x27;eau.<\/p><p>Et, enfin, profitez de La Crème Libre sans modération !<\/p>",
+          "product_manual_image": "shopify:\/\/shop_images\/Comment-ca-marche.gif"
+        }
+      },
+      "16147008902b856686": {
+        "type": "text-columns",
+        "blocks": {
+          "16147008902b856686-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-clean.png",
+              "image_width": 60,
+              "title": "Clean",
+              "text": "<p>Formules 100% naturelles. 93+\/100 sur Yuka. Certifié Cosmos Natural<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/qu-y-a-t-il-dans-nos-recharges"
+            }
+          },
+          "e7a3bf15-0224-4f39-861f-a4c7bf03e60e": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-vegan.png",
+              "image_width": 60,
+              "title": "VEGAN",
+              "text": "<p>Aucune matière animale ou d'origine animale<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "a76af400-933e-4c91-9ffe-9b9d4020d7af": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-femmes-enceintes.png",
+              "image_width": 60,
+              "title": "POUR TOUS",
+              "text": "<p>Pour toute la famille et tous les types de peau, même sensibles<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "16147008902b856686-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-francais.png",
+              "image_width": 60,
+              "title": "Français",
+              "text": "<p>Conçus, testés, approvisionnés et fabriqués en France<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/marque-cosmetique-francaise"
+            }
+          },
+          "16147008902b856686-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-ecoconcu.png",
+              "image_width": 60,
+              "title": "Eco-conçus",
+              "text": "<p>90% d'emballages à usage unique en moins<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/pourquoi-acheter-un-pot-separement"
+            }
+          },
+          "33bd3bd9-1399-494e-97a1-4da883b3f429": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-efficaces.png",
+              "image_width": 60,
+              "title": "Efficaces",
+              "text": "<p>Notés 4,8\/5 <br\/>par nos clients<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "16147008902b856686-0",
+          "e7a3bf15-0224-4f39-861f-a4c7bf03e60e",
+          "a76af400-933e-4c91-9ffe-9b9d4020d7af",
+          "16147008902b856686-1",
+          "16147008902b856686-2",
+          "33bd3bd9-1399-494e-97a1-4da883b3f429"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "center",
+          "divider": false
+        }
+      },
+      "1614765960684f393a": {
+        "type": "logo-list",
+        "blocks": {
+          "dbb4f875-ace2-495a-a000-b0c59e8608a4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Paris_Match.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "c37cc2ff-2cbc-44e5-a1a2-8e4e2346004c": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Femina.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "d1408c4d-837d-4994-9953-dafd310b1b03": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/La_creme_libre_le_Monde_4759ddcb-12ad-4464-938c-3fb8f36b7488.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "1614765960684f393a-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Plan_de_travail_1_copie_10.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "2eb85205-8518-400e-bfee-d909a9d0906c": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/vogue-09.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "81ca1e96-337b-49aa-bfb3-86cea86450b4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Plan_de_travail_1_copie_9_77930e5a-109b-4db4-ad02-39e9894e13f3.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "dea197ed-18df-4362-a3fa-ad44a6dce054": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Plan_de_travail_1_copie_12_60f5b9c6-184b-42cc-9247-839b724247d8.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "8fad074a-0d62-412e-a9bc-4e6892ec83ff": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Logos-10.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "1614765960684f393a-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Plan_de_travail_1_copie_11_6f6f24a8-93ee-4fba-8232-2d2ab655d6f5.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          },
+          "1614765960684f393a-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Plan_de_travail_1_copie_11.png",
+              "link": "shopify:\/\/pages\/presse"
+            }
+          }
+        },
+        "block_order": [
+          "dbb4f875-ace2-495a-a000-b0c59e8608a4",
+          "c37cc2ff-2cbc-44e5-a1a2-8e4e2346004c",
+          "d1408c4d-837d-4994-9953-dafd310b1b03",
+          "1614765960684f393a-0",
+          "2eb85205-8518-400e-bfee-d909a9d0906c",
+          "81ca1e96-337b-49aa-bfb3-86cea86450b4",
+          "dea197ed-18df-4362-a3fa-ad44a6dce054",
+          "8fad074a-0d62-412e-a9bc-4e6892ec83ff",
+          "1614765960684f393a-2",
+          "1614765960684f393a-1"
+        ],
+        "settings": {
+          "title": "",
+          "logo_opacity": 76,
+          "divider": false
+        }
+      },
+      "1614868622c2883f19": {
+        "type": "text-columns",
+        "blocks": {
+          "0a39347a-ea8c-43b7-89be-ac7d87fe82ad": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Premiere_fois_chez_nous___V2.png",
+              "image_width": 190,
+              "title": "1er achat",
+              "text": "<p><strong>Choisissez <\/strong>votre<strong> <\/strong>eco-recharge de soin <br\/>et la couleur de votre pot réutilisable<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1614868636fe13a949-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la_creme_libre_comment_ca_marche_1.png",
+              "image_width": 190,
+              "title": "Chez vous",
+              "text": "<p><strong>Retirez l'opercule<\/strong> de votre eco-recharge <br\/>et <strong>insérez-la<\/strong> dans votre pot réutilisable<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1614868636fe13a949-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la_creme_libre_comment_ca_marche_2.png",
+              "image_width": 190,
+              "title": "Achats suivants",
+              "text": "<p>Ne recommandez <strong>que votre eco-recharge<\/strong> <br\/>et réutilisez votre pot !<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "0a39347a-ea8c-43b7-89be-ac7d87fe82ad",
+          "1614868636fe13a949-0",
+          "1614868636fe13a949-2"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "center",
+          "divider": false
+        }
+      },
+      "16148688127b2657ba": {
+        "type": "featured-content",
+        "settings": {
+          "title": "Première fois chez nous ?",
+          "subtitle": "",
+          "text": "<p>Notre système de recharge est simple, économique et écologique.<\/p>",
+          "align_text": "center",
+          "narrow_column": false,
+          "enlarge_text": true,
+          "divider": true
+        }
+      },
+      "16166723969ac2d687": {
+        "type": "cta",
+        "disabled": true,
+        "settings": {
+          "button_label": "Je me lance",
+          "button_link": "shopify:\/\/collections\/recharges",
+          "top": 0,
+          "bottom": 0,
+          "align_text": "center"
+        }
+      },
+      "16195076070ffae8a5": {
+        "type": "hero-video",
+        "settings": {
+          "title": "SOINS VISAGE NATURELS\nrechargeables à l'infini",
+          "title_size": 60,
+          "subheading": "Sensoriels. Efficaces. Français.",
+          "link_text": "Je découvre",
+          "link": "shopify:\/\/collections\/all",
+          "color_accent": "#1d1d1c",
+          "text_align": "vertical-center horizontal-left",
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0425\/0835\/3695\/files\/Video_campagne_sans_textes.mp4?v=1624440310",
+          "section_height": "100vh",
+          "mobile_height": "400px"
+        }
+      },
+      "product-qtydiscount": {
+        "type": "product-qtydiscount",
+        "settings": {
+          "title": "une routine : plus économique et écologique",
+          "text": "<p>Achetez toute votre routine d'un coup, c'est plus économique et écologique !<br\/><br\/>- Une seule expédition = moins de sur-emballage et une empreinte carbone plus maîtrisée.<br\/>- C'est aussi moins de coûts pour tous. <br\/><br\/>Ces économies, La Crème Libre a fait  le choix de vous en faire aussi profiter.<\/p><p><\/p>",
+          "discount_1_title": "-5%",
+          "discount_1_text": "pour 2 recharges achetées simultanément",
+          "discount_2_title": "-10%",
+          "discount_2_text": "pour 3 recharges achetées simultanément",
+          "discount_3_title": "-15%",
+          "discount_3_text": "Dès 4 recharges achetées simultanément",
+          "discountqty_enable": false
+        }
+      },
+      "giftcard-header": {
+        "type": "giftcard-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo-creme-libre_x2_e828f9c3-55da-4b86-862f-4a5703ac3eae.png",
+          "desktop_logo_width": 100,
+          "mobile_logo_width": 60
+        }
+      },
+      "162426437130d14c32": {
+        "type": "newsletter",
+        "settings": {
+          "title": "Rejoignez le mouvement #balancetacrème",
+          "text": "<p>Recevez nos conseils et nouveautés en béton directement dans votre boite mail<\/p>",
+          "color_background": "#798780",
+          "color_text": "#ffffff"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "title": "Vous aimez notre contenu ?",
+          "text": "<p>Inscrivez-vous à notre newsletter pour recevoir tous nos conseils et nos actualités<\/p><p><br\/><\/p>",
+          "color_background": "#f9f9f9",
+          "color_text": "#1c1d1d"
+        }
+      },
+      "16250546128904c73e": {
+        "type": "advanced-content",
+        "disabled": true,
+        "blocks": {
+          "16250546128904c73e-1": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align:center; background-color: #e2b37f; padding-top:10px;padding-bottom: 30px;\">\n<h2 style=\"background-color: #efefef; padding-top: 10px; padding-bottom: 5px; margin-left: 40px; margin-right: 40px;\">OFFRE DE BIENVENUE<\/h2>\n<p style=\"font-size: 20px; \">Bénéficiez de 5€ de réduction avec le code :​<\/p>\n<p style=\"font-size: 35px;padding-left:15px; padding-right:15px;\">OCTOBRE21\n<\/p>\n<p style=\"font-size: 10px;\">- Offre valable pour toute première commande dès 39,90€ d'achat, jusqu'au 31 octobre inclus - <\/p>\n<\/div>",
+              "width": "50%",
+              "alignment": "center"
+            }
+          },
+          "65d16977-1725-4a8f-b8c1-dc338bd8b44a": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align: center;justify-content: center!important;background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0425\/0835\/3695\/files\/La_creme_libre_offre_premiers_clients.jpg?v=1633080912); background-repeat: no-repeat; background-position: 50%;  width:100%; height: 324px;\">\n\n<h3 style=\"text-align:center; font-size: 30px;padding-top: 30px;\"><\/h3>\n<\/div>",
+              "width": "50%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "16250546128904c73e-1",
+          "65d16977-1725-4a8f-b8c1-dc338bd8b44a"
+        ],
+        "settings": {
+          "full_width": false,
+          "space_around": false
+        }
+      },
+      "162505646026539363": {
+        "type": "cta",
+        "settings": {
+          "button_label": "J'EN PROFITE",
+          "button_link": "https:\/\/lacremelibre.com\/collections\/recharges",
+          "top": 0,
+          "bottom": 60,
+          "align_text": "center"
+        }
+      },
+      "162522125195787b8b": {
+        "type": "text-and-button",
+        "settings": {
+          "text_color": "#ffffff",
+          "bg_color": "#798780",
+          "title": "MOINS C’EST MIEUX !",
+          "text": "<p><br\/>Chez La Crème Libre, on veut stopper les excès de l’industrie cosmétique actuelle.<br\/><br\/>Alors on s’engage à révolutionner votre routine beauté pour qu’elle soit aussi simple que respectueuse de l’environnement, tout en s’adressant à tous : quels que soient votre genre, votre âge et votre type de peau.<\/p><p><\/p>",
+          "button_label": "Je veux en savoir plus",
+          "button_link": "https:\/\/lacremelibre.com\/pages\/nous-sommes-la-creme-libre",
+          "button_color": ""
+        }
+      },
+      "1625465955bc02f527": {
+        "type": "featured-content",
+        "settings": {
+          "title": "Tout ce qu'il vous faut pour avoir une belle peau",
+          "subtitle": "",
+          "text": "",
+          "align_text": "center",
+          "narrow_column": true,
+          "enlarge_text": false,
+          "divider": false
+        }
+      },
+      "16254660083288e546": {
+        "type": "promo-grid",
+        "blocks": {
+          "16254660083288e546-0": {
+            "type": "simple",
+            "settings": {
+              "link": "shopify:\/\/collections\/nettoyer",
+              "text": "Nettoyants",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/La_creme_libre_blog_detox_nettoyer.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          },
+          "16254660083288e546-1": {
+            "type": "simple",
+            "settings": {
+              "link": "shopify:\/\/collections\/nettoyer",
+              "text": "Démaquillants",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/demaquillants.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          },
+          "3f98211e-35bd-4f3e-b6bb-fb8e8a72a2a1": {
+            "type": "simple",
+            "settings": {
+              "link": "shopify:\/\/collections\/exfolier",
+              "text": "Exfoliants",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/La_creme_libre_blog_detox_exfolier.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          },
+          "9c9815e2-1890-49b2-b196-7db459caf1b8": {
+            "type": "simple",
+            "settings": {
+              "link": "shopify:\/\/collections\/hydrater",
+              "text": "Hydratants",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/La_creme_libre_blog_routine_beaute_express_soir.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          },
+          "f10403f0-4263-418f-ba82-0be8c601b9e3": {
+            "type": "simple",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/collections\/pots-beton-classique",
+              "text": "Pots rechargeables",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/la_creme_libre_pots_93f9dd4b-ff17-4ba1-be48-ced678def6a1.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          },
+          "117f867a-eb6a-4ccb-b314-04221eb1cd2a": {
+            "type": "simple",
+            "disabled": true,
+            "settings": {
+              "link": "shopify:\/\/products\/carte-cadeau-la-creme-libre",
+              "text": "Carte cadeau",
+              "text_color": "#ffffff",
+              "image": "shopify:\/\/shop_images\/la-creme-libre-carte-cadeau.jpg",
+              "width": "50",
+              "height": 300,
+              "color_tint": "#1d1d1c",
+              "color_tint_opacity": 20,
+              "framed": false
+            }
+          }
+        },
+        "block_order": [
+          "16254660083288e546-0",
+          "16254660083288e546-1",
+          "3f98211e-35bd-4f3e-b6bb-fb8e8a72a2a1",
+          "9c9815e2-1890-49b2-b196-7db459caf1b8",
+          "f10403f0-4263-418f-ba82-0be8c601b9e3",
+          "117f867a-eb6a-4ccb-b314-04221eb1cd2a"
+        ],
+        "settings": {
+          "full_width": false,
+          "gutter_size": 40,
+          "space_above": false,
+          "space_below": true
+        }
+      },
+      "1631723766efccdd4e": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Nos best sellers",
+          "home_featured_products": "best-sellers",
+          "per_row": 4,
+          "rows": 1,
+          "mobile_scrollable": true,
+          "view_all": false,
+          "divider": false
+        }
+      },
+      "163172415328da2f37": {
+        "type": "featured-content",
+        "settings": {
+          "title": "",
+          "subtitle": "",
+          "text": "",
+          "align_text": "left",
+          "narrow_column": false,
+          "enlarge_text": false,
+          "divider": false
+        }
+      },
+      "text-columns": {
+        "type": "text-columns",
+        "blocks": {
+          "630945cd-99fc-48d4-bc5f-5cae86fa51ee": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-clean.png",
+              "image_width": 60,
+              "title": "Clean",
+              "text": "<p>Formules 100% naturelles. 93+\/100 sur Yuka. Certifié Cosmos Natural<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/qu-y-a-t-il-dans-nos-recharges"
+            }
+          },
+          "72013717-4081-4976-97b4-9721e59d74af": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-vegan.png",
+              "image_width": 60,
+              "title": "VEGAN",
+              "text": "<p>Aucune matière animale ou d'origine animale<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "13386d9b-6984-450d-a5a2-eb9ee719c0db": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-femmes-enceintes.png",
+              "image_width": 60,
+              "title": "POUR TOUS",
+              "text": "<p>Pour toute la famille et tous les types de peau, même sensibles<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "49741ea8-2adc-408e-8af5-5bd3e41b1f41": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-francais.png",
+              "image_width": 60,
+              "title": "Français",
+              "text": "<p>Conçus, testés, approvisionnés et fabriqués en France<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/marque-cosmetique-francaise"
+            }
+          },
+          "569eabd3-a559-4b37-8e8b-1f3f4b7bf36a": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-ecoconcu.png",
+              "image_width": 60,
+              "title": "Eco-conçus",
+              "text": "<p>90% d'emballages à usage unique en moins<\/p>",
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/pourquoi-acheter-un-pot-separement"
+            }
+          },
+          "e0d79efb-0970-4e63-bb6a-fceeda67f4ca": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/la-creme-libre-cosmetique-efficaces.png",
+              "image_width": 60,
+              "title": "Efficaces",
+              "text": "<p>Notés 4,8\/5 <br\/>par nos clients<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "630945cd-99fc-48d4-bc5f-5cae86fa51ee",
+          "72013717-4081-4976-97b4-9721e59d74af",
+          "13386d9b-6984-450d-a5a2-eb9ee719c0db",
+          "49741ea8-2adc-408e-8af5-5bd3e41b1f41",
+          "569eabd3-a559-4b37-8e8b-1f3f4b7bf36a",
+          "e0d79efb-0970-4e63-bb6a-fceeda67f4ca"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left",
+          "divider": false
+        }
+      },
+      "16330120003c34f26b": {
+        "type": "featured-promotions",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/la_creme_libre_creme_hydratante_nourrissante_excellent_yuka.jpg",
+          "heading": "Vous ne savez pas quel produit choisir ?",
+          "textarea": "Obtenez votre routine personnalisée en répondant à ce court questionnaire.",
+          "btn_text": "C'est ici !",
+          "btn_link": "shopify:\/\/pages\/routine-personnalisee",
+          "btn_text_color": "#ffffff",
+          "btn_bg_color": "#000000"
+        }
+      },
+      "1633427832025a1c33": {
+        "type": "judgeme_carousel_section",
+        "disabled": true,
+        "settings": {
+          "maxwidth": 1080
+        }
+      }
+    },
+    "content_for_index": [
+      "16195076070ffae8a5",
+      "16147008902b856686",
+      "1631723766efccdd4e",
+      "16330120003c34f26b",
+      "16148688127b2657ba",
+      "1614868622c2883f19",
+      "162505646026539363",
+      "16250546128904c73e",
+      "16166723969ac2d687",
+      "163172415328da2f37",
+      "1597741283286",
+      "162522125195787b8b",
+      "1625465955bc02f527",
+      "16254660083288e546",
+      "1597158090451",
+      "1614765960684f393a",
+      "1597156387939",
+      "162426437130d14c32",
+      "1597158621439",
+      "1601045375359",
+      "1633427832025a1c33"
+    ]
+  },
+  "presets": {
+    "Modern": {
+      "breadcrumb": true,
+      "button_style": "square",
+      "cart_notes_enable": false,
+      "cart_terms_conditions_enable": false,
+      "cart_type": "drawer",
+      "checkout_accent_color": "#111111",
+      "checkout_body_background_color": "#fff",
+      "checkout_button_color": "#111111",
+      "checkout_error_color": "#ff6d6d",
+      "checkout_input_background_color_mode": "white",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_sidebar_background_color": "#fafafa",
+      "collection_color_swatches": false,
+      "collection_grid_gutter": true,
+      "collection_grid_image": "product",
+      "collection_grid_opacity": 10,
+      "collection_grid_shape": "square",
+      "collection_grid_style": "overlaid-box",
+      "collection_grid_text_align": "center",
+      "collection_grid_tint": "#000000",
+      "color_announcement": "#0f0f0f",
+      "color_announcement_text": "#fff",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_borders": "#e8e8e1",
+      "color_button": "#111111",
+      "color_button_text": "#fff",
+      "color_cart_dot": "#ff4f33",
+      "color_drawer_background": "#ffffff",
+      "color_drawer_border": "#e8e8e1",
+      "color_drawer_button": "#111111",
+      "color_drawer_button_text": "#ffffff",
+      "color_drawer_text": "#000000",
+      "color_footer": "#ffffff",
+      "color_footer_text": "#000000",
+      "color_header": "#fff",
+      "color_header_text": "#000",
+      "color_image_overlay": "#000",
+      "color_image_overlay_text_shadow": 20,
+      "color_large_image_bg": "#0f0f0f",
+      "color_modal_overlays": "#e6e6e6",
+      "color_price": "#1c1d1d",
+      "color_savings_text": "#ff4e4e",
+      "color_small_image_bg": "#fff",
+      "icon_linecaps": "miter",
+      "icon_weight": "2px",
+      "inventory_enable": true,
+      "product_color_swatches": false,
+      "product_contact": false,
+      "product_grid_image_size": "natural",
+      "product_hover_image": false,
+      "quantity_enable": false,
+      "quick_shop_text": "Quick view",
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "sku_enable": false,
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_instagram_link": "https:\/\/instagram.com\/shopify",
+      "social_pinterest_link": "https:\/\/www.pinterest.com\/shopify",
+      "type_base_font_family": "futura_n4",
+      "type_base_line_height": 1.6,
+      "type_base_size": 16,
+      "type_base_spacing": "25",
+      "type_body_align_text": true,
+      "type_collection_font": "body",
+      "type_collection_size": 18,
+      "type_header_base_size": 38,
+      "type_header_capitalize": true,
+      "type_header_font_family": "tiemann_n4",
+      "type_header_line_height": 1,
+      "type_header_spacing": "0",
+      "type_headers_align_text": true,
+      "type_navigation_capitalize": true,
+      "type_navigation_size": 13,
+      "type_navigation_style": "body",
+      "type_product_style": "body",
+      "variant_type": "button",
+      "vendor_enable": false,
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1524770014057": {
+              "type": "logo",
+              "settings": {
+                "desktop_logo_width": 140,
+                "mobile_logo_width": 110
+              }
+            },
+            "1524770292306": {
+              "type": "announcement",
+              "settings": {
+                "text": "Free shipping",
+                "link_text": "On all orders over $100"
+              }
+            },
+            "1524770296206": {
+              "type": "announcement",
+              "settings": {
+                "text": "Hassle-free returns",
+                "link_text": "30-day postage paid returns"
+              }
+            }
+          },
+          "block_order": [
+            "1524770014057",
+            "1524770292306",
+            "1524770296206"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "center",
+            "header_style": "sticky",
+            "sticky_index": false,
+            "sticky_collection": false,
+            "announcement_compact": true,
+            "toolbar_menu": "top",
+            "toolbar_social": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494301487048": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            },
+            "1494301487049": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {
+                "container_width": 33
+              }
+            }
+          },
+          "block_order": [
+            "1494301487049",
+            "1494292487693",
+            "1494301487048"
+          ],
+          "settings": {
+            "show_payment_icons": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 5,
+            "per_row": 4
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "social_enable": true,
+            "image_position": "left",
+            "image_size": "large"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "1498163293234": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499789718857": {
+          "type": "featured-collections",
+          "blocks": {
+            "1499789718857-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1499789718857-1": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1499789718857-2": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1499789718857-3": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1499789718857-0",
+            "1499789718857-1",
+            "1499789718857-2",
+            "1499789718857-3"
+          ],
+          "settings": {
+            "title": "Shop by category",
+            "divider": false,
+            "per_row": 4,
+            "enable_gutter": true
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "80% 0",
+            "color_border": "#cdb8ac",
+            "layout": "left",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-image-row": {
+              "type": "image-row",
+              "settings": {
+                "enable_gutter": false,
+                "enable_zoom": true
+              }
+            },
+            "product-text-and-image": {
+              "type": "text-and-image",
+              "settings": {
+                "layout": "left"
+              }
+            },
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550,
+                "parallax": true
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            },
+            "product-hero-video": {
+              "type": "hero-video",
+              "settings": {
+                "text_align": "vertical-bottom horizontal-left",
+                "section_height": "650px",
+                "mobile_height": "auto"
+              }
+            }
+          },
+          "block_order": [
+            "product-image-row",
+            "product-text-and-image",
+            "product-background-image-text",
+            "product-text-columns",
+            "product-hero-video"
+          ],
+          "settings": {
+            "social_enable": true,
+            "image_size": "medium"
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-image-hero": {
+              "type": "image-hero",
+              "settings": {
+              }
+            },
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "title": "Featured collection",
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-image-hero",
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {
+          }
+        },
+        "1524769873765": {
+          "type": "slideshow",
+          "blocks": {
+            "1524769873765-0": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop this",
+                "link_2": "shopify:\/\/collections\/all",
+                "link_text_2": "Shop all",
+                "color_accent": "#000000",
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "top center"
+              }
+            },
+            "1524769873765-1": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop all",
+                "link_2": "shopify:\/\/collections\/all",
+                "link_text_2": "Shop all",
+                "color_accent": "#000000",
+                "text_align": "vertical-bottom horizontal-left",
+                "focal_point": "top center"
+              }
+            }
+          },
+          "block_order": [
+            "1524769873765-0",
+            "1524769873765-1"
+          ],
+          "settings": {
+            "section_height": "750px",
+            "mobile_height": "auto",
+            "parallax": true,
+            "style": "bars",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": true,
+            "parallax": true
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {
+              }
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1525115199973": {
+          "type": "blog-posts",
+          "settings": {
+            "title": "From the journal",
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "1525118065355": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1525295772132": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1525886124958": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525886482727": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 720,
+                "text_size": 120,
+                "focal_point": "80% 50%",
+                "boxed": false,
+                "framed": false
+              }
+            },
+            "1525886854810": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1525911710924": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525886482727",
+            "1525886854810",
+            "1525911710924"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525912530555": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525912530555-0": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 800,
+                "text_size": 100,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1525912530555-1": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 500,
+                "text_size": 100,
+                "text_align": "vertical-bottom horizontal-center",
+                "focal_point": "80% 50%",
+                "boxed": true,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1525912530555-0",
+            "1525912530555-1"
+          ],
+          "settings": {
+            "full_width": true,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526403837307": {
+              "type": "banner",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "label": "Shop now",
+                "color_tint": "#e95454",
+                "color_tint_opacity": 10,
+                "framed": false
+              }
+            },
+            "1526496043079": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 500,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526403837307",
+            "1526496043079"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        }
+      },
+      "content_for_index": [
+        "1524769873765",
+        "1498163293234",
+        "1525912530555",
+        "1499789718857",
+        "1525886124958",
+        "1525295772132",
+        "1499790633921",
+        "1525115199973",
+        "1525118065355"
+      ]
+    },
+    "Vintage": {
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_price": "#1c1d1d",
+      "color_savings_text": "#72acc7",
+      "color_borders": "#f2f2f2",
+      "color_button": "#682d2d",
+      "color_button_text": "#fff",
+      "color_cart_dot": "#682d2d",
+      "color_small_image_bg": "#f7f7f9",
+      "color_large_image_bg": "#682d2d",
+      "color_header": "#ffffff",
+      "color_header_text": "#000000",
+      "color_announcement": "#6a2727",
+      "color_announcement_text": "#ffffff",
+      "color_footer": "#f7f7f9",
+      "color_footer_text": "#593b32",
+      "color_drawer_background": "#ffffff",
+      "color_drawer_text": "#000000",
+      "color_drawer_border": "#e8e8e1",
+      "color_drawer_button": "#682d2d",
+      "color_drawer_button_text": "#ffffff",
+      "color_modal_overlays": "#cdc9c2",
+      "color_image_overlay": "#000",
+      "color_image_overlay_text_shadow": 30,
+      "type_header_font_family": "americana_n8",
+      "type_header_spacing": "0",
+      "type_header_base_size": 36,
+      "type_header_line_height": 1.2,
+      "type_header_capitalize": true,
+      "type_headers_align_text": true,
+      "type_base_font_family": "avenir_next_n4",
+      "type_base_spacing": "0",
+      "type_base_size": 18,
+      "type_base_line_height": 1.5,
+      "type_body_align_text": true,
+      "type_navigation_style": "heading",
+      "type_navigation_size": 17,
+      "type_product_style": "body",
+      "type_collection_font": "heading",
+      "type_collection_size": 20,
+      "button_style": "square",
+      "icon_weight": "3px",
+      "icon_linecaps": "miter",
+      "vendor_enable": false,
+      "sku_enable": false,
+      "quantity_enable": false,
+      "variant_type": "button",
+      "inventory_enable": false,
+      "quick_shop_text": "Quick view",
+      "product_grid_image_size": "square",
+      "product_hover_image": true,
+      "product_color_swatches": false,
+      "collection_color_swatches": false,
+      "product_contact": true,
+      "collection_grid_style": "below",
+      "collection_grid_shape": "landscape",
+      "collection_grid_image": "product",
+      "collection_grid_text_align": "top-center",
+      "collection_grid_tint": "#000000",
+      "collection_grid_opacity": 0,
+      "collection_grid_gutter": true,
+      "cart_type": "drawer",
+      "cart_notes_enable": false,
+      "cart_terms_conditions_enable": false,
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_twitter_link": "https:\/\/twitter.com\/shopify",
+      "social_instagram_link": "https:\/\/instagram.com\/shopify",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/shopify",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#682d2d",
+      "checkout_button_color": "#682d2d",
+      "checkout_error_color": "#ff6d6d",
+      "product_fixed_image_height": false,
+      "breadcrumb": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1520882467782": {
+              "type": "logo",
+              "settings": {
+              }
+            },
+            "1521051841065": {
+              "type": "announcement",
+              "settings": {
+                "text": "Free shipping",
+                "link_text": "On all orders over $100",
+                "link": "shopify:\/\/collections\/all"
+              }
+            },
+            "1520888647304": {
+              "type": "announcement",
+              "settings": {
+                "text": "Hassle-free returns",
+                "link_text": "30-day postage paid returns",
+                "link": "shopify:\/\/collections\/all"
+              }
+            }
+          },
+          "block_order": [
+            "1520882467782",
+            "1521051841065",
+            "1520888647304"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "center",
+            "header_style": "normal",
+            "sticky_index": true,
+            "sticky_collection": true,
+            "announcement_compact": true,
+            "toolbar_menu": "toolbar",
+            "toolbar_social": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494301487048": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            },
+            "1494301487049": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {
+                "container_width": 30
+              }
+            }
+          },
+          "block_order": [
+            "1494301487049",
+            "1494292487693",
+            "1494301487048"
+          ],
+          "settings": {
+            "show_payment_icons": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 3,
+            "per_row": 2
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "social_enable": false,
+            "image_size": "large",
+            "thumbnail_position": "below"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "1498163293234": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#6a635b",
+            "layout": "right",
+            "height": 750,
+            "framed": true,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-image-row": {
+              "type": "image-row",
+              "settings": {
+                "enable_gutter": false,
+                "enable_zoom": true
+              }
+            },
+            "product-text-and-image": {
+              "type": "text-and-image",
+              "settings": {
+                "layout": "left"
+              }
+            },
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550,
+                "parallax": true
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            },
+            "product-hero-video": {
+              "type": "hero-video",
+              "settings": {
+                "text_align": "vertical-bottom horizontal-left",
+                "section_height": "650px",
+                "mobile_height": "auto"
+              }
+            }
+          },
+          "block_order": [
+            "product-image-row",
+            "product-text-and-image",
+            "product-background-image-text",
+            "product-text-columns",
+            "product-hero-video"
+          ],
+          "settings": {
+            "social_enable": true,
+            "image_size": "medium"
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {
+          }
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": true,
+            "parallax": true
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {
+              }
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1523298253705": {
+          "type": "slideshow",
+          "blocks": {
+            "1523298253705-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "1523298253705-1": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "text_align": "vertical-bottom horizontal-right",
+                "focal_point": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1523298253705-0",
+            "1523298253705-1"
+          ],
+          "settings": {
+            "section_height": "100vh",
+            "mobile_height": "500px",
+            "parallax": true,
+            "style": "minimal",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "list-collections-template": {
+          "type": "list-collections-template",
+          "settings": {
+            "title_enable": true,
+            "display_type": "all",
+            "sort": "alphabetical",
+            "grid": "3"
+          }
+        },
+        "1523380258742": {
+          "type": "featured-collections",
+          "disabled": true,
+          "blocks": {
+            "1523380258742-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1523380258742-1": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1523380258742-2": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1524685811204": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1524685816171": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1524685829380": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1523380258742-0",
+            "1523380258742-1",
+            "1523380258742-2",
+            "1524685811204",
+            "1524685816171",
+            "1524685829380"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 3,
+            "enable_gutter": true
+          }
+        },
+        "1524685456938": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#655147",
+            "layout": "right",
+            "height": 650,
+            "framed": true,
+            "parallax": true
+          }
+        },
+        "1524685919990": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1524685997883": {
+          "type": "newsletter",
+          "settings": {
+            "color_background": "#f7f7f9",
+            "color_text": "#3f2e2e"
+          }
+        },
+        "1524686167862": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 3,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1524686876171": {
+          "type": "featured-collections",
+          "blocks": {
+            "1524686876171-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1524686876171-1": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1524686876171-0",
+            "1524686876171-1"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 2,
+            "enable_gutter": true
+          }
+        },
+        "1525878145666": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525879359021": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 500,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "80% 50%",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525879359021"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525881294487": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525881312850": {
+              "type": "banner",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "label": "Learn more",
+                "color_tint": "#d69344",
+                "color_tint_opacity": 14,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525881312850"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 0,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525968536765": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525968571112": {
+              "type": "product",
+              "settings": {
+                "label": "New",
+                "enable_price": true,
+                "width": "100",
+                "text_size": 100,
+                "color_tint": "#000",
+                "color_tint_opacity": 0,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1525968571112"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525969002555": {
+          "type": "blog-posts",
+          "settings": {
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "1526493275292": {
+          "type": "promo-grid",
+          "blocks": {
+            "1526493290477": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "100",
+                "boxed": true,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526493290477"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": true
+          }
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526501666154": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "100",
+                "boxed": true,
+                "framed": true
+              }
+            },
+            "1526501699095": {
+              "type": "banner",
+              "settings": {
+                "heading": "Free shipping",
+                "link": "shopify:\/\/collections\/all",
+                "label": "Learn more",
+                "color_tint": "#d69344",
+                "color_tint_opacity": 14,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526501666154",
+            "1526501699095"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        }
+      },
+      "content_for_index": [
+        "1523298253705",
+        "1498163293234",
+        "1525878145666",
+        "1523380258742",
+        "1524686876171",
+        "1526493275292",
+        "1524685456938",
+        "1524685919990",
+        "1525881294487",
+        "1524686167862",
+        "1524685997883",
+        "1499790633921",
+        "1525968536765",
+        "1525969002555"
+      ]
+    },
+    "Bold": {
+      "color_body_bg": "#000000",
+      "color_body_text": "#ffffff",
+      "color_price": "#d1ba98",
+      "color_savings_text": "#ff6565",
+      "color_borders": "#2b2a27",
+      "color_button": "#9f8561",
+      "color_button_text": "#ffffff",
+      "color_cart_dot": "#9f8561",
+      "color_small_image_bg": "#000000",
+      "color_large_image_bg": "#111111",
+      "color_header": "#000000",
+      "color_header_text": "#ffffff",
+      "color_announcement": "#cf2424",
+      "color_announcement_text": "#fff",
+      "color_footer": "#000000",
+      "color_footer_text": "#ffffff",
+      "color_drawer_background": "#000000",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_border": "#2b2a27",
+      "color_drawer_button": "#9f8561",
+      "color_drawer_button_text": "#ffffff",
+      "color_modal_overlays": "#67635d",
+      "color_image_overlay": "#000",
+      "color_image_overlay_opacity": 15,
+      "color_image_overlay_text_shadow": 30,
+      "type_header_font_family": "fjalla_one_n4",
+      "type_header_spacing": "150",
+      "type_header_base_size": 45,
+      "type_header_line_height": 1.2,
+      "type_header_capitalize": true,
+      "type_headers_align_text": true,
+      "type_base_font_family": "itc_conduit_n4",
+      "type_base_spacing": "50",
+      "type_base_size": 18,
+      "type_base_line_height": 1.4,
+      "type_body_align_text": true,
+      "type_navigation_style": "heading",
+      "type_navigation_size": 18,
+      "type_product_style": "heading",
+      "type_collection_font": "heading",
+      "type_collection_size": 23,
+      "button_style": "angled",
+      "icon_weight": "5px",
+      "icon_linecaps": "miter",
+      "vendor_enable": false,
+      "search_enable": false,
+      "sku_enable": false,
+      "quantity_enable": false,
+      "variant_type": "button",
+      "inventory_enable": false,
+      "product_save_amount": true,
+      "product_zoom_enable": false,
+      "quick_shop_enable": true,
+      "quick_shop_text": "Quick view",
+      "product_grid_image_size": "square",
+      "product_hover_image": false,
+      "product_color_swatches": false,
+      "collection_color_swatches": false,
+      "product_content_collapse_1": false,
+      "product_content_collapse_2": true,
+      "product_content_collapse_3": true,
+      "product_contact": false,
+      "enable_product_reviews": true,
+      "reviews_layout": "expandable",
+      "collection_grid_style": "overlaid-box",
+      "collection_grid_shape": "landscape",
+      "collection_grid_image": "collection",
+      "collection_grid_text_align": "bottom-center",
+      "collection_grid_tint": "#000000",
+      "collection_grid_opacity": 10,
+      "collection_grid_gutter": true,
+      "cart_type": "drawer",
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_twitter_link": "https:\/\/twitter.com\/shopify",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/shopify",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#000000",
+      "checkout_input_background_color_mode": "transparent",
+      "checkout_sidebar_background_color": "#000000",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#ae9878",
+      "checkout_button_color": "#ae9878",
+      "checkout_error_color": "#ff6d6d",
+      "color_image_2": "#cf2424",
+      "color_image_2_opacity": 0,
+      "color_image_1": "#6d1414",
+      "color_image_1_opacity": 0,
+      "type_accent_style": "body",
+      "type_accent_bold": true,
+      "type_accent_capitalize": true,
+      "type_button_font": "heading",
+      "type_button_capitalize": false,
+      "type_header_accent_transform": true,
+      "type_base_accent_transform": true,
+      "collection_grid_font": "heading",
+      "color_image_bg": "#000000",
+      "breadcrumb": true,
+      "color_sale_tag": "#990000",
+      "color_input": "#ffffff",
+      "checkout_banner_background_color": "#fff",
+      "checkout_call_to_action_color": "#a26b25",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1524768779513": {
+              "type": "logo",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1524768779513"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "left-center",
+            "header_style": "normal",
+            "sticky_index": true,
+            "sticky_collection": false,
+            "announcement_compact": false,
+            "toolbar_social": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {
+              }
+            },
+            "1526406521795": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1525444454442": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            }
+          },
+          "block_order": [
+            "1494292487693",
+            "1526406521795",
+            "1525444454442"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 3,
+            "per_row": 5
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "social_enable": true,
+            "image_size": "large"
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#090909",
+            "layout": "right",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "button_link": "shopify:\/\/collections\/all",
+                "alignment": "top left",
+                "color_border": "#3a6815",
+                "layout": "right",
+                "height": 550,
+                "parallax": false
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "product-background-image-text",
+            "product-text-columns"
+          ],
+          "settings": {
+            "social_enable": true,
+            "image_size": "large",
+            "thumbnail_position": "below"
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {
+              }
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {
+          }
+        },
+        "1524768368258": {
+          "type": "slideshow",
+          "blocks": {
+            "1524768368258-0": {
+              "type": "image",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop all",
+                "text_align": "vertical-center horizontal-left",
+                "focal_point": "top center"
+              }
+            }
+          },
+          "block_order": [
+            "1524768368258-0"
+          ],
+          "settings": {
+            "section_height": "750px",
+            "mobile_height": "auto",
+            "parallax": true,
+            "style": "minimal",
+            "autoplay": true,
+            "autoplay_speed": 5
+          }
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": false,
+            "parallax": false
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {
+              }
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1525290496166": {
+          "type": "featured-collections",
+          "blocks": {
+            "1525290496166-0": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1525290496166-2": {
+              "type": "collection",
+              "settings": {
+              }
+            },
+            "1525290496166-1": {
+              "type": "collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1525290496166-0",
+            "1525290496166-2",
+            "1525290496166-1"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 3,
+            "enable_gutter": true
+          }
+        },
+        "1525969132569": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525969870126": {
+              "type": "product",
+              "settings": {
+                "link_label": "Shop now",
+                "label": "New",
+                "enable_price": true,
+                "width": "50",
+                "text_size": 100,
+                "color_tint": "#f8ebd4",
+                "color_tint_opacity": 0,
+                "framed": true
+              }
+            },
+            "1525969996422": {
+              "type": "product",
+              "settings": {
+                "link_label": "Shop now",
+                "label": "New",
+                "enable_price": true,
+                "width": "50",
+                "text_size": 100,
+                "color_tint": "#ff0000",
+                "color_tint_opacity": 0,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525969870126",
+            "1525969996422"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 5,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1526048428302": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": false,
+            "divider": false
+          }
+        },
+        "1526048519234": {
+          "type": "newsletter",
+          "settings": {
+            "color_background": "#171615",
+            "color_text": "#ffffff"
+          }
+        },
+        "1526048620689": {
+          "type": "blog-posts",
+          "settings": {
+            "title": "Our blog",
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526501090474": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 400,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1526501130849": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1526501360047": {
+              "type": "banner",
+              "settings": {
+                "label": "Shop 2017",
+                "color_tint": "#514f4b",
+                "color_tint_opacity": 20,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1526501090474",
+            "1526501130849",
+            "1526501360047"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        },
+        "1526480838446": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#f4f4f4",
+            "layout": "left",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "1526481284428": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "1526481405629": {
+          "type": "promo-grid",
+          "blocks": {
+            "1526481405629-1": {
+              "type": "advanced",
+              "settings": {
+                "width": "100",
+                "height": 660,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1526481405629-1"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 34,
+            "space_above": false,
+            "space_below": true
+          }
+        }
+      },
+      "content_for_index": [
+        "1524768368258",
+        "1526481284428",
+        "1525969132569",
+        "1525290496166",
+        "1526048428302",
+        "1526480838446",
+        "1499790633921",
+        "1526048519234",
+        "1526048620689",
+        "1526481405629"
+      ]
+    }
+  }
+}

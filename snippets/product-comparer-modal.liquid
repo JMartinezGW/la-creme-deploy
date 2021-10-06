@@ -1,0 +1,72 @@
+{% comment %}
+  Renders the product comparer modal
+
+  Accepts:
+  - title: {String} Title of the product comparer modal
+  - main_product: {Object} Product of the current page
+  - product_to_compare_1: {Object} Product to compare N°1
+  - product_to_compare_2: {Object} Product to compare N°2
+  - product_to_compare_3: {Object} Product to compare N°3
+
+  Usage:
+  {% render 'product-comparer-modal', title: product.metafields.product_sheet.product_comparer_modal_title %}
+{% endcomment %}
+
+{% if product_to_compare_2 and product_to_compare_3 == nil %}
+  {% assign number_of_columns = '3-columns' %}
+{% elsif product_to_compare_3 %}
+  {% assign number_of_columns = '4-columns' %}
+{% else %}
+  {% assign number_of_columns = '2-columns' %}
+{% endif %}
+
+<div class='overlay js-button-compare-products' id='overlay'>
+  <div class='product-comparer-modal'>
+    <button
+      type='button'
+      class="js-button-compare-products"
+      aria-hidden='true'
+    ></button>
+    <div class='product-comparer-modal__header'>
+      <h2 class='product-comparer-modal__title'>
+        {{ title}}
+      </h2>
+    </div>
+    <div class="product-comparer-modal__body-container">
+      <div class="product-comparer-modal__body product-comparer-modal__body--{{ number_of_columns }}">
+        {% render 'product-card',
+          image: main_product.featured_image,
+          benefits: main_product.metafields.product_sheet.benefits,
+          skin_types: main_product.metafields.product_sheet.skin_types,
+          texture: main_product.metafields.product_sheet.texture,
+          key_assets: main_product.metafields.product_sheet.key_assets,
+        %}
+        {% render 'product-card',
+          image: product_to_compare_1.featured_image,
+          benefits: product_to_compare_1.metafields.product_sheet.benefits,
+          skin_types: product_to_compare_1.metafields.product_sheet.skin_types,
+          texture: product_to_compare_1.metafields.product_sheet.texture,
+          key_assets: product_to_compare_1.metafields.product_sheet.key_assets,
+        %}
+        {% if product_to_compare_2 %}
+          {% render 'product-card',
+            image: product_to_compare_2.featured_image,
+            benefits: product_to_compare_2.metafields.product_sheet.benefits,
+            skin_types: product_to_compare_2.metafields.product_sheet.skin_types,
+            texture: product_to_compare_2.metafields.product_sheet.texture,
+            key_assets: product_to_compare_2.metafields.product_sheet.key_assets,
+          %}
+        {% endif %}
+        {% if product_to_compare_3 %}
+          {% render 'product-card',
+            image: product_to_compare_3.featured_image,
+            benefits: product_to_compare_3.metafields.product_sheet.benefits,
+            skin_types: product_to_compare_3.metafields.product_sheet.skin_types,
+            texture: product_to_compare_3.metafields.product_sheet.texture,
+            key_assets: product_to_compare_3.metafields.product_sheet.key_assets,
+          %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

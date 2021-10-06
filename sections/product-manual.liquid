@@ -1,0 +1,56 @@
+{% if section.settings.product_manual_heading != blank and section.settings.product_manual_text != blank %}
+  <div class="page-width">
+    <div class="grid">
+      {% if section.settings.product_manual_heading %}
+        <div class="grid__item medium-up--one-half">
+          {% if section.settings.product_manual_image %}
+          	{%- assign img_url = section.settings.product_manual_image | img_url: 'master' -%}
+          	<img
+              class="image-fit background-media-text__image background-media-text__image--{{ section.id }} lazyload"
+              src=""
+              data-src="{{ img_url }}"
+              alt="{{ section.settings.product_manual_image.alt | escape }}">
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="grid__item medium-up--one-half">
+        {% if section.settings.product_manual_heading %}
+          <header class="section-header">
+            <h3 class="section-header__title">
+              {{ section.settings.product_manual_heading }}
+            </h3>
+            <div class="section-header__text">
+              {% if section.settings.product_manual_text %}
+              	{{ section.settings.product_manual_text }}
+              {% endif %}
+            </div>
+          </header>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Mode d'emploi",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_manual_heading",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "product_manual_text",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_manual_image",
+        "label": "Image"
+      }
+    ]
+  }
+{% endschema %}

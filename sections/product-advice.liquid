@@ -1,0 +1,24 @@
+{% if product.metafields.product-advice.product-advice-title %}
+  <div class="page-width">
+    <header class="section-header">
+      <h3 class="section-header__title">
+        {{ product.metafields.product-advice.product-advice-title }}
+      </h3>
+      {% if product.metafields.product-advice.product-advice-text %}
+      <div class="section-header__text">
+        {{ product.metafields.product-advice.product-advice-text }}
+      </div>
+      {% if product.metafields.product-advice.product-advice-author %}
+      <p class="h5">{{ product.metafields.product-advice.product-advice-author }}</p>
+      {% endif %}
+      {% endif %}
+    </header>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Témoignages",
+    "class": "index-section"
+  }
+{% endschema %}

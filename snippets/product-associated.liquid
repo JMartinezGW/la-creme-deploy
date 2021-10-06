@@ -1,0 +1,88 @@
+{% assign productHandles = product.metafields.associated_products.associated_products_references | split: "|"  %}
+
+{%- if productHandles != blank -%}
+  <div class="product-single_associated" id="product-single_associated">
+    <div class="page-width">
+    {%- if product.metafields.associated_products.associated_products_title != blank -%}
+      <p class="product-single_associated-title">{{product.metafields.associated_products.associated_products_title}}</p>
+    {%- endif -%}
+    {%- assign grid_item_width = 'medium-up--one-fifth' -%}
+      
+    {% assign product_count     = productHandles|size %}
+    {% assign nb_total_variants = 0 %}
+    {%- for productHandle in productHandles -%}
+      {% assign productassociated = all_products[productHandle] %}
+      {%- for option in productassociated.options -%}
+        {% if option == 'Color' or option == 'Couleur' %}
+          {% assign index             = forloop.index0 %}
+          {% assign colorlist         = '' %}
+          {% assign color             = '' %}
+          {% assign nb_variants       = 0 %}
+          {% for variant in productassociated.variants %}
+            {% capture color %}
+              {{ variant.options[index] }}
+            {% endcapture %}
+            {% unless colorlist contains color %}
+              {% capture tempList %}
+                {{ colorlist | append: color | append: " " }}
+              {% endcapture %}
+              {% assign colorlist = tempList %}
+              {% assign nb_variants = nb_variants|plus:1 %}
+            {% endunless %}
+          {% endfor %}
+          {% assign nb_total_variants = nb_total_variants|plus:nb_variants|minus:1 %}
+        {% endif %}
+      {%- endfor -%}
+    {%- endfor -%}
+    {% assign product_count = product_count |plus: nb_total_variants %}
+  
+    <div class="product-associated-wrapper">
+      <div class="product-associated-slider" id="ProductAssociated" data-count="{{ product_count }}">
+        {% for productHandle in productHandles %}
+          {% assign productassociated = all_products[productHandle] %}
+          {%- for option in productassociated.options -%}
+            {% if option == 'Color' or option == 'Couleur' %}
+              {% assign index     = forloop.index0 %}
+              {% assign colorlist = '' %}
+              {% assign color     = '' %}
+              {% for variant in productassociated.variants %}
+                {% capture color %}
+                  {{ variant.options[index] }}
+                {% endcapture %}
+                {% assign variant_title_split = variant.title | split: "/" %}
+                {% assign variant_color_title = variant_title_split[0] %}
+                {% unless colorlist contains color %}
+                  <div
+                    class="product-associated-slide--{{ product.id }}"
+                    data-aos="row-of-{{ product_count }}"
+                    {{ block.shopify_attributes }}>
+                      {%- include 'product-grid-item-variant-color'
+                        product: productassociated,
+                        grid_item_width: grid_item_width
+                      -%}
+                    </div>
+                  {% capture tempList %}
+                    {{ colorlist | append: color | append: " " }}
+                  {% endcapture %}
+                  {% assign colorlist = tempList %}
+                {% endunless %}
+              {% endfor %}
+            {% endif %}
+            {% unless productassociated.options contains 'Color' or productassociated.options contains 'Couleur' %}
+              <div
+                 class="product-associated-slide--{{ product.id }}"
+                 data-aos="row-of-{{ product_count }}"
+                 {{ block.shopify_attributes }}>
+                {% include 'product-grid-item'
+                    product: productassociated,
+                    grid_item_width: grid_item_width
+                %}
+              </div>
+            {% endunless %}
+          {%- endfor -%}
+        {% endfor %}
+  		</div>
+      </div>
+  </div>
+</div>
+{%- endif -%}

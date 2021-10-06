@@ -1,0 +1,27 @@
+{%- assign link_count = 0 -%}
+{% for link in main_menu.links %}
+  {%- assign link_count = link_count | plus: 1 -%}
+{% endfor %}
+{%- assign link_count_half = link_count | divided_by: 2 -%}
+
+<div class="header-item header-item--logo-split" role="navigation" aria-label="Primary">
+  <div class="header-item header-item--split-left">
+    {% include 'header-desktop-nav-custom', disable_aria: true, limit: link_count_half %}
+    {% if section.settings.main_menu_alignment == 'center-split-custom' %}
+      {% if settings.search_enable %}
+        <div class="site-nav sm-down--hide">
+          <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header js-no-transition">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+            <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="header-item header-item--logo">
+    {% include 'header-logo-block' %}
+  </div>
+  <div class="header-item header-item--split-right">
+    {% include 'header-desktop-nav-custom', disable_aria: true, offset: link_count_half %}
+  </div>
+</div>

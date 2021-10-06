@@ -1,0 +1,126 @@
+{% assign block_base_key = 'product_reinsurance_' | append: product.type | downcase %}
+{% assign block_base_key_heading = block_base_key | append: '_heading' %}
+{%- if section.settings[block_base_key_heading] -%}
+  <div class="page-width">
+    <header class="section-header">
+      <h3 class="section-header__title">
+        {{ section.settings[block_base_key_heading] }}
+      </h3>
+    </header>
+    <div class="grid">
+      {% for block in section.blocks %}
+        {% assign block_type = 'reinsurance_' | append: product.type | downcase %}
+        {%- if block.type == block_type -%}
+          {% assign block_base_key_title = block_base_key | append: '_title' %}
+          {% assign block_base_key_subtitle = block_base_key | append: '_subtitle' %}
+          {% assign block_base_key_text = block_base_key | append: '_text' %}
+          <div {{ block.shopify_attributes }} class="grid__item product__reassurance__item--{{ block.id }} medium-up--one-quarter" data-type="{{ block.type }}">
+            <div class="reinsurance">
+              <h4 class="h3">{{ block.settings[block_base_key_title] }}</h4>
+              <h5>{{ block.settings[block_base_key_subtitle] }}</h5>
+              {{ block.settings[block_base_key_text] }}
+            </div>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Réassurance",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_reinsurance_recharge_heading",
+        "label": "Title 'Recharges'"
+      },
+      {
+        "type": "text",
+        "id": "product_reinsurance_pot_heading",
+        "label": "Title 'Pots'"
+      },
+      {
+        "type": "text",
+        "id": "product_reinsurance_lifestyle_heading",
+        "label": "Title 'Lifestyle'"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "reinsurance_recharge",
+        "name": "Recharges",
+		"limit": 4,
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_reinsurance_recharge_title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "product_reinsurance_recharge_subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "richtext",
+            "id": "product_reinsurance_recharge_text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "reinsurance_pot",
+        "name": "Pots",
+		"limit": 4,
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_reinsurance_pot_title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "product_reinsurance_pot_subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "richtext",
+            "id": "product_reinsurance_pot_text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "reinsurance_lifestyle",
+        "name": "Lifestyle",
+		"limit": 4,
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_reinsurance_lifestyle_title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "product_reinsurance_lifestyle_subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "richtext",
+            "id": "product_reinsurance_lifestyle_text",
+            "label": "Text"
+          }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

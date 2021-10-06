@@ -1,0 +1,19 @@
+{% assign color_options = settings.colors_options | split: ';' %}
+{% for color in color_options %}
+  {% assign color_ = color | split: '/' %}
+  .radio_{{ color_[0] }} {
+    inline-size: 30px;
+    block-size: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: {{ color_[1] }};
+  }
+{% endfor %}
+
+.jdgm-review-widget.jdgm--done-setup-widget.jdgm-widget {
+	display: none;
+}
+
+.product-judgeme-reviews .jdgm-review-widget.jdgm--done-setup-widget.jdgm-widget {
+	display: block;
+}
